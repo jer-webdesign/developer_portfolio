@@ -1,0 +1,100 @@
+/* Projects Section Styles (Unified with About) */
+.projects-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  scroll-margin-top: 80px;
+}
+
+.projects-section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--primary);
+  font-family: var(--title-font-family);
+}
+
+.projects-section, .projects-grid, .project-card, .project-category, .project-items, .project-tag {
+  font-family: var(--font-family);
+  letter-spacing: 0.025rem;
+  word-spacing: 0.15em;
+}
+
+/* Projects Grid Layout */
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Project Card Styles */
+.project-card {
+  background: var(--bg-card);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Project Card Category */
+.project-category {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+/* Project Card Items */
+.project-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Project Card Tag */
+.project-tag {
+  background: rgba(37, 99, 235, 0.2);
+  color: rgba(172, 199, 255, 1.0);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  line-height: 1.9;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  word-break: break-word;
+}
+
+/* Variant colors for actionable links */
+.project-tag[data-variant="demo"] {
+  background: #2563eb;
+  color: white;
+}
+
+.project-tag[data-variant="github"] {
+  background: #8b5cf6;
+  color: white;
+}
+
+/* Hover effects */
+.project-tag:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 6px 18px rgba(2,6,23,0.35);
+  cursor: pointer;
+}
+
+.project-tag[data-variant="demo"]:hover {
+  background: #1d4ed8; /* slightly darker */
+}
+
+.project-tag[data-variant="github"]:hover {
+  background: #7c3aed; /* slightly darker */
+}
+
+

@@ -1,0 +1,127 @@
+{
+  "hero": {
+    "headline": "JEREMY OLANDA",
+    "subheadline": ["Software Developer", "Web Developer", "3D Artist", "Problem Solver"]    
+  },
+  "about": {
+    "title": "About Me",
+    "content": "I'm Jeremy Olanda, a software engineer with a passion for building robust, scalable, and user-friendly applications. My journey in tech has taken me from embedded systems to full-stack web development, and I thrive on solving complex problems and learning new technologies."
+  },
+  "skillCategories": [
+    {
+      "category": "🔥 PROGRAMMING LANGUAGES",
+      "skills": ["C/C++", "Java", "Python", "JavaScript"]
+    },
+    {
+      "category": "🌐 FRONT-END DEVELOPMENT",
+      "skills": ["React", "Vite", "Bootstrap", "Tailwind CSS", "Responsive Design"]
+    },
+    {
+      "category": "🛠 BACK-END DEVELOPMENT",
+      "skills": ["Node.js", "Flask", "Django", "RESTful APIs"]
+    },
+    {
+      "category": "🗄️ DATABASES",
+      "skills": ["PostgreSQL", "MySQL", "SQLite", "MongoDB"]
+    },
+    {
+      "category": "☁️ CLOUD DEVELOPMENT",
+      "skills": ["Google Drive API", "Google Firebase", "Strapi", "Render", "Vercel", "AWS"]
+    },
+    {
+      "category": "☁️ DEVELOPMENT TOOLS",
+      "skills": ["Swagger", "GitHub", "Eclipse IDE", "IntelliJ IDEA", "PyCharm"]
+    },
+    {
+      "category": "☁️ WEB TECHNOLOGIES",
+      "skills": ["Selenium", "WebDriver", "REST APIs", "JSON"]
+    }
+  ],
+  "profile": {
+    "id": 1,
+    "name": "JEREMY OLANDA",
+    "bio": "Software Engineer skilled across the development lifecycle from coding and testing to deployment and backend operations. Currently expanding expertise in modern web frameworks at Southern Alberta Institute of Technology. Demonstrated success delivering efficient, cost-optimized solutions while leading diverse technical teams and enhancing large-scale systems for global enterprises. Driven by a commitment to solving intricate technical problems through innovative, human-centered design.",
+    "skills": ["C/C++", "Java", "Python", "JavaScript", "React", "Node.js", "Express", "PostgreSQL", "MongoDB", "Docker", "AWS", "Git", "RESTful APIs", "Agile Development"],
+    "github": "https://github.com/jer-webdesign",
+    "linkedin": "https://www.linkedin.com/in/jeremy-garcia-olanda/",
+    "email": "jeremy.g.olanda@gmail.com",
+    "location": "Calgary, Alberta, Canada"
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Developer Portfolio Platform",
+      "description": "A secure HTTPS portfolio platform showcasing projects, skills, and achievements with SSL encryption and comprehensive security headers",
+      "technologies": ["React", "Node.js", "Express", "HTTPS", "Helmet.js", "SSL/TLS"],
+      "liveDemo": "https://localhost:5173",
+      "githubRepo": "https://github.com/jer-webdesign/dev-portfolio",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "E-Commerce Bookstore Platform",
+      "description": "Visbook is a modern, responsive online bookstore developed to showcase and sell visual graphics books. The application is designed to deliver a seamless user experience for browsing, searching, and purchasing books related to visual arts, design, and graphics. The platform integrates with STRAPI Cloud for content management and Firebase for authentication and order management, following best practices for modern web development.",
+      "technologies": ["Node.js", "React", "Vite", "React Router", "STRAPI Cloud (Headless CMS, PostgreSQL)", "Firebase", "Firestore Database", "SendGrid", "Custom modular CSS"],
+      "liveDemo": "https://visbook.vercel.app/",
+      "githubRepo": "https://github.com/jer-webdesign/visbook_strapi",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "Widget Dashboard",
+      "description": "A modern, interactive dashboard built with React and Vite featuring drag-and-drop widgets with real-time data from various APIs. The dashboard provides a customizable interface for weather information, programming trivia, movie recommendations, and word definitions.",
+      "technologies": ["HTML5", "CSS3", "JavaScript (ES6+)", "React", "Vite", "React DnD", "Material-UI Icons"],
+      "liveDemo": "https://widget-dashboard-kappa.vercel.app/",
+      "githubRepo": "https://github.com/jer-webdesign/widget_dashboard",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "title": "Weather Analytics Dashboard",
+      "description": "Real-time weather monitoring and analytics with interactive data visualization and historical trend analysis",
+      "technologies": ["Python Flask (backend server)", "PyScript", 
+      "HTML5", "CSS3", "Font Awesome", "Open-Meteo API", "Countries Now API"],
+      "liveDemo": "https://vercel-flask-weather-forecast.vercel.app/",
+      "githubRepo": "https://github.com/jer-webdesign/vercel_flask_weather_forecast",
+      "featured": false
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Building Secure HTTPS Servers with Node.js",
+      "excerpt": "Learn how to implement SSL/TLS encryption, security headers, and best practices for building secure web applications",
+      "content": "In this comprehensive tutorial, we explore creating secure HTTPS servers using Node.js and Express. We cover SSL certificate generation with OpenSSL, implementing security headers with Helmet.js, and designing effective cache control strategies. This article demonstrates real-world security practices essential for modern web development.",
+      "author": "Jeremy Olanda",
+      "publishDate": "2024-10-10",
+      "tags": ["security", "nodejs", "https", "ssl", "web-development"]
+    },
+    {
+      "id": 2,
+      "title": "Mastering Cache Control Strategies for Web Performance",
+      "excerpt": "Deep dive into HTTP caching mechanisms, stale-while-revalidate patterns, and performance optimization techniques",
+      "content": "Effective caching is crucial for web performance. This article explores different cache control strategies including public vs private caching, stale-while-revalidate patterns, and how to implement cache-friendly API designs. Learn how to balance performance with security considerations.",
+      "author": "Jeremy Olanda",
+      "publishDate": "2024-10-05",
+      "tags": ["performance", "caching", "http", "optimization", "api-design"]
+    },
+    {
+      "id": 3,
+      "title": "React Performance Optimization: Beyond the Basics",
+      "excerpt": "Advanced techniques for optimizing React applications including memoization, code splitting, and rendering optimization",
+      "content": "Moving beyond basic React patterns, this tutorial covers advanced performance optimization techniques. We explore React.memo, useMemo, useCallback, code splitting with dynamic imports, and virtual scrolling for large datasets. Practical examples demonstrate measurable performance improvements.",
+      "author": "Jeremy Olanda",
+      "publishDate": "2024-09-28",
+      "tags": ["react", "performance", "optimization", "frontend", "javascript"]
+    },
+    {
+      "id": 4,
+      "title": "Full-Stack Development with Express and PostgreSQL",
+      "excerpt": "Building scalable backend services with proper database design, error handling, and API architecture",
+      "content": "This comprehensive guide covers building production-ready backend services using Express.js and PostgreSQL. Topics include database schema design, connection pooling, error handling middleware, input validation, and implementing RESTful API principles for maintainable applications.",
+      "author": "Jeremy Olanda",
+      "publishDate": "2024-09-20",
+      "tags": ["backend", "postgresql", "express", "api", "database"]
+    }
+  ]
+}

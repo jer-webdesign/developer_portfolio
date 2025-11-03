@@ -1,0 +1,92 @@
+/* Home (Hero) Section Styles */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+/* Hero Content */
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 9rem;
+  z-index: 2;
+  padding: 0 2rem;
+  font-family: var(--font-family);
+}
+
+/* Hero Title */
+.hero-title {
+  font-family: var(--title-font-family);
+  font-size: clamp(3.5rem, 8vw, 4rem);
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #06b6d4 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 3s ease-in-out infinite alternate;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* Hero Subtitle */
+.hero-subtitle {
+  font-family: var(--font-family);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #a0c2fd;
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+}
+
+/* Hero Description */
+.hero-description {
+  font-family: var(--font-family);
+  font-size: 1.10rem;
+  line-height: 1.7;
+  color: #d1d5db;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.85;
+  font-weight: 400;
+}
+
+/* Profile links (GitHub / LinkedIn / Email) */
+.profile-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+
+.profile-links .link {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-weight: 600;
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+
+.social-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  display: inline-block;
+}
+
+.github-icon {
+  transform: translateY(-1px);
+}
+
+
+

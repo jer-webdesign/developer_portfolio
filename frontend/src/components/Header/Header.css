@@ -1,0 +1,36 @@
+.header {
+  width: 100%;
+  background: var(--bg-dark, #0f172a);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem 1.5rem 3rem;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 10;
+}
+
+.header-logo img {
+  height: 48px;
+}
+
+.header-nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav a {
+  color: var(--primary, #60a5fa);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.header-nav a:hover,
+.header-nav .contact-link {
+  color: var(--accent, #a78bfa);
+}
