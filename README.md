@@ -306,9 +306,24 @@ developer-portfolio/
 
 ##  **Documentation**
 
-- **[SSL Setup Guide](backend/SSL_SETUP_README.md)** - Certificate generation steps
-- **[Routes Design & Cache Control](backend/ROUTES_DESIGN_CACHE_CONTROL.md)** - Detailed caching strategies
-- **[Frontend Guide](frontend/README.md)** - React application setup
+### **Core Documentation**
+- **[Main README](README.md)** - Project overview and quick start guide
+- **[Frontend Guide](frontend/README.md)** - React application setup, architecture and integration details
+
+### **Authentication & Security**
+- **[Authentication Guide](README_AUTH.md)** - Comprehensive authentication implementation
+- **[RBAC Implementation](RBAC_IMPLEMENTATION.md)** - Role-based access control details
+- **[SSL Setup Guide](backend/SSL_SETUP_README.md)** - Certificate generation and HTTPS setup
+- **[Google OAuth Setup](backend/GOOGLE_OAUTH_SETUP.md)** - Google authentication integration
+
+### **API & Backend**
+- **[Routes Design & Cache Control](backend/ROUTES_DESIGN_CACHE_CONTROL.md)** - API caching strategies and route design
+
+### **Features & Implementation**
+- **[Multi-User Platform](MULTI_USER_PLATFORM.md)** - Multi-user portfolio platform features
+- **[Portfolio Editor Integration](PORTFOLIO_EDITOR_INTEGRATION.md)** - Portfolio editing functionality
+- **[Customizable Pages Update](CUSTOMIZABLE_PAGES_UPDATE.md)** - Customizable page components
+- **[Lessons Learned](LESSONS_LEARNED.md)** - Development insights and best practices
 
 ---
 
