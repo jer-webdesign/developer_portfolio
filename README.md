@@ -209,7 +209,7 @@ This project implements a **modern, secure web application** featuring:
 
 ##  **Project Structure**
 
-```
+```plaintext
 developer-portfolio/
 ├── backend/                    # Express.js Server
 │   ├── config/                # Configuration files
@@ -266,6 +266,8 @@ developer-portfolio/
     ├── package.json          # Frontend dependencies
     └── vite.config.js        # Vite configuration
 ```
+
+---
 
 ##  **Security Implementation**
 
