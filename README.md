@@ -267,8 +267,6 @@ developer-portfolio/
     └── vite.config.js        # Vite configuration
 ```
 
----
-
 ##  **Security Implementation**
 
 ### **Authentication Security**
