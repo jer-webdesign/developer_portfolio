@@ -10,7 +10,6 @@ require('dotenv').config();
 const connectDB = require('./config/database');
 const passport = require('./config/passport');
 const { apiLimiter } = require('./middleware/rateLimiter');
-const { checkSyncStatus } = require('./sync-database-roles');
 
 // Import routes
 const authRoutes = require('./routes/auth');
@@ -112,23 +111,10 @@ const sslOptions = {
 // Create HTTPS server
 const server = https.createServer(sslOptions, app);
 
-server.listen(PORT, async () => {
+server.listen(PORT, () => {
   console.log(`🔒 HTTPS Server running on https://localhost:${PORT}`);
   console.log(`🌍 Environment: ${process.env.NODE_ENV}`);
-  
-  // Check and log role synchronization status on startup
-  try {
-    console.log('MongoDB Connected Successfully');
-    const isSync = await checkSyncStatus();
-    if (isSync) {
-      console.log('✅ All user roles are synchronized with admin configuration');
-    } else {
-      console.log('⚠️  Role synchronization issues detected');
-      console.log('💡 Run "node sync-database-roles.js" to fix role synchronization');
-    }
-  } catch (error) {
-    console.log('⚠️  Could not check role synchronization:', error.message);
-  }
+  console.log('MongoDB Connected Successfully');
 });
 
 // Graceful shutdown
