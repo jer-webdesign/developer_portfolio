@@ -491,8 +491,6 @@ developer-portfolio/
 ### **Development & Testing**
 - Jest. (n.d.). Jest - JavaScript testing framework. https://jestjs.io/
 - ESLint. (n.d.). ESLint - Pluggable JavaScript linter. https://eslint.org/
-- Nodemon. (n.d.). Nodemon - Monitor for changes in Node.js applications. https://nodemon.io/
-- Supertest. (n.d.). Supertest - HTTP assertion library. https://github.com/ladjs/supertest
 
 ### **Email & Utilities**
 - Nodemailer. (n.d.). Nodemailer - Send emails from Node.js. https://nodemailer.com/
@@ -502,7 +500,6 @@ developer-portfolio/
 ### **Documentation & Resources**
 - Mozilla Developer Network. (n.d.). HTTP headers. https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
 - Mozilla Developer Network. (n.d.). Web security. https://developer.mozilla.org/en-US/docs/Web/Security
-- OWASP Foundation. (n.d.). OWASP Top 10. https://owasp.org/www-project-top-ten/
 - JSON Web Tokens. (n.d.). JWT.io - JSON Web Token introduction. https://jwt.io/
 
 ### **Educational Institution**
