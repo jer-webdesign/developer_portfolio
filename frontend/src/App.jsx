@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from './contexts/AuthContext';
+import axiosInstance from './utils/axios';
 
 // Import pages
 import Home from './pages/Home/Home.jsx';
@@ -52,43 +53,65 @@ const App = () => {
     }
   }, []);
 
+  // Fetch data on mount and whenever authentication state changes
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [isAuthenticated]);
 
   const fetchData = async () => {
     try {
-      // Get token from localStorage
-      const token = localStorage.getItem('accessToken');
-      const headers = {
-        'Content-Type': 'application/json'
-      };
-      
-      // Add authorization header if token exists
-      if (token) {
-        headers['Authorization'] = `Bearer ${token}`;
+      // If not authenticated, fetch the single static developer JSON
+      if (!isAuthenticated) {
+        const devRes = await axiosInstance.get('/developer.json');
+        const dev = devRes.data || devRes.data?.data || {};
+
+        setProfile(dev.profile || null);
+        setProjects(dev.projects || []);
+        setPosts(dev.posts || []);
+        setHero(dev.hero || null);
+        setAbout(dev.about || null);
+        setSkillCategories(dev.skillCategories || []);
+        setContactInfo({ email: dev.profile?.email || '', phone: '+1 (403) 987-6543', location: dev.profile?.location || '' });
+        setLoading(false);
+        return;
       }
 
+      // Use axiosInstance which provides consistent baseURL and auth header
       const [profileRes, projectsRes, postsRes, heroRes, aboutRes, skillCategoriesRes, contactInfoRes] = await Promise.all([
-        fetch(`${API_BASE_URL}/profile`, { headers }).then(r => r.json()),
-        fetch(`${API_BASE_URL}/projects`, { headers }).then(r => r.json()),
-        fetch(`${API_BASE_URL}/posts`, { headers }).then(r => r.json()),
-        fetch(`${API_BASE_URL}/hero`, { headers }).then(r => r.json()),
-        fetch(`${API_BASE_URL}/about`, { headers }).then(r => r.json()),
-        fetch(`${API_BASE_URL}/skill-categories`, { headers }).then(r => r.json()),
-        fetch(`${API_BASE_URL}/contact-info`, { headers }).then(r => r.json())
+        // Protected endpoints (require auth)
+        axiosInstance.get('/api/profile'),
+        axiosInstance.get('/api/projects'),
+        // Public portfolio endpoints (mounted at root in backend)
+        axiosInstance.get('/posts'),
+        axiosInstance.get('/hero'),
+        axiosInstance.get('/about'),
+        axiosInstance.get('/skill-categories'),
+        axiosInstance.get('/contact-info')
       ]);
       
       console.log('Projects response:', projectsRes);
       console.log('Projects data:', projectsRes.data);
-      
-      setProfile(profileRes.data);
-      setProjects(projectsRes.data);
-      setPosts(postsRes.data);
-      setHero(heroRes.data);
-      setAbout(aboutRes.data);
-      setSkillCategories(skillCategoriesRes.data);
-      setContactInfo(contactInfoRes.data);
+
+      // profileRes may contain a user object or the profile object directly
+      const profileData = profileRes?.data?.user?.profile || profileRes?.data?.profile || profileRes?.data?.user || profileRes?.data || null;
+
+      // Normalize: ensure `profile` state is the profile object (not the whole user)
+      const normalizedProfile = profileData?.profile ? profileData.profile : profileData;
+      // Ensure `email` on the normalized profile prefers the server's top-level user.email when present
+      const serverEmail = profileRes?.data?.user?.email || null;
+      if (serverEmail) {
+        normalizedProfile.email = normalizedProfile.email || serverEmail;
+      }
+      console.debug('Profile response normalized:', normalizedProfile);
+      setProfile(normalizedProfile);
+      setProjects(projectsRes.data?.data || projectsRes.data || []);
+      setPosts(postsRes.data?.data || postsRes.data || []);
+      const heroData = heroRes.data?.data || heroRes.data || null;
+      console.debug('Hero response:', heroData);
+      setHero(heroData);
+      setAbout(aboutRes.data?.data || aboutRes.data || null);
+      setSkillCategories(skillCategoriesRes.data?.data || skillCategoriesRes.data || []);
+      setContactInfo(contactInfoRes.data?.data || contactInfoRes.data || null);
       setLoading(false);
     } catch (error) {
       console.error('Error fetching data:', error);

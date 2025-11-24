@@ -2,21 +2,33 @@ import { useEffect } from 'react';
 import './Home.css';
 
 const Home = ({ profile, hero, navigateToSection }) => {
+  // Compute title fallback so the hero title always shows a sensible value
+  const title = hero?.headline || profile?.name || profile?.firstName || 'JEREMY OLANDA';
+
   useEffect(() => {
 
     const subtitleElement = document.getElementById('typing-subtitle');
     if (!subtitleElement) return;
 
-    // Only use hero.subheadline if provided (either array or non-empty string).
-    const subtitles = Array.isArray(hero?.subheadline) && hero.subheadline.length
+    // Determine subtitles: prefer hero.subheadline or hero.subheadlines (both variants),
+    // then fall back to profile.skills or a short tagline from profile.bio
+    const possibleSub = Array.isArray(hero?.subheadline) && hero.subheadline.length
       ? hero.subheadline
-      : (typeof hero?.subheadline === 'string' && hero.subheadline.trim().length)
-        ? [hero.subheadline.trim()]
-        : null;
+      : Array.isArray(hero?.subheadlines) && hero.subheadlines.length
+        ? hero.subheadlines
+        : (typeof hero?.subheadline === 'string' && hero.subheadline.trim().length)
+          ? [hero.subheadline.trim()]
+          : (typeof hero?.subheadlines === 'string' && hero.subheadlines.trim().length)
+            ? [hero.subheadlines.trim()]
+            : null;
+
+    const subtitles = possibleSub ||
+      ((Array.isArray(profile?.skills) && profile.skills.length) ? [profile.skills[0]] :
+        (profile?.bio ? [profile.bio.split('.').slice(0,1).join('').trim()] : null));
 
     if (!subtitles || subtitles.length === 0) {
-      // No subtitles provided: leave subtitle empty and do not run the animation
-      subtitleElement.textContent = '';
+      // No subtitles provided: show a simple fallback from profile name
+      subtitleElement.textContent = profile?.name || profile?.firstName || '';
       return;
     }
 
@@ -50,17 +62,19 @@ const Home = ({ profile, hero, navigateToSection }) => {
       timeoutId = setTimeout(typeWriter, typeSpeed);
     };
 
+    // Start with empty text to ensure animation runs consistently
+    subtitleElement.textContent = '';
     typeWriter();
 
     return () => {
       if (timeoutId) clearTimeout(timeoutId);
     };
-  }, [hero]);
+  }, [hero, profile]);
 
   return (
     <section className="hero home-section">
       <div className="hero-content">
-        <h1 className="hero-title">{hero?.headline}</h1>
+        <h1 className="hero-title">{title}</h1>
         <h2 id="typing-subtitle" className="hero-subtitle" aria-live="polite"></h2>
         <p className="hero-description">{profile?.bio}</p>
         {/* Social / contact links from profile (display above CTAs) */}
@@ -76,8 +90,8 @@ const Home = ({ profile, hero, navigateToSection }) => {
           {profile?.linkedin && (
             <a className="link" href={profile.linkedin} target="_blank" rel="noreferrer">🔗 LinkedIn</a>
           )}
-          {profile?.email && (
-            <a className="link" href={`mailto:${profile.email}`}>✉️ Email</a>
+          {(profile?.email || profile?.publicEmail) && (
+            <a className="link" href={`mailto:${profile?.email || profile?.publicEmail}`}>✉️ Email</a>
           )}
         </div>
 

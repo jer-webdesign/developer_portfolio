@@ -29,11 +29,8 @@ axiosInstance.interceptors.response.use(
 
       try {
         // Try to refresh token
-        const response = await axios.post(
-          `${import.meta.env.VITE_API_URL}/auth/refresh`,
-          {},
-          { withCredentials: true }
-        );
+        // Use the configured axios instance so baseURL and withCredentials are respected
+        const response = await axiosInstance.post('/auth/refresh', {}, { withCredentials: true });
 
         const { accessToken } = response.data;
         localStorage.setItem('accessToken', accessToken);
