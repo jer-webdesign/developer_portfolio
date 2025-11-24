@@ -34,7 +34,7 @@ jobs:
       - name: Create summary script
         working-directory: ./${{ matrix.dir }}
         run: |
-          cat > summarize.js << 'EOF'
+          cat > summarize.cjs << 'EOF'
           const fs = require('fs');
           
           const auditFile = 'audit-result.json';
@@ -70,7 +70,7 @@ jobs:
         working-directory: ./${{ matrix.dir }}
         env:
           AUDIT_DIR: ${{ matrix.dir }}
-        run: node summarize.js
+        run: node summarize.cjs
 
       - name: Upload audit artifacts
         uses: actions/upload-artifact@v4
