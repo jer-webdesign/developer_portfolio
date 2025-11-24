@@ -1,0 +1,47 @@
+name: Security Audit
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  npm-audit:
+    name: npm audit (backend & frontend)
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dir: [backend, frontend]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        working-directory: ./
+        run: |
+          cd ${{ matrix.dir }}
+          npm ci
+
+      - name: Run npm audit and save JSON
+        working-directory: ./
+        run: |
+          cd ${{ matrix.dir }}
+          npm audit --json > audit-${{ matrix.dir }}.json || true
+
+      - name: Summarize audit results (non-failing)
+        working-directory: ./
+        run: |
+          cd ${{ matrix.dir }}
+          node -e "const fs=require('fs'); const p='audit-${{ matrix.dir }}.json'; if(!fs.existsSync(p)){console.log('No audit report for ${{ matrix.dir }}'); fs.writeFileSync('audit-${{ matrix.dir }}-summary.txt','No audit report'); process.exit(0);} try{ const a=JSON.parse(fs.readFileSync(p)); const vuln = (a.metadata && a.metadata.vulnerabilities) ? Object.values(a.metadata.vulnerabilities).reduce((s,v)=>s+v,0) : 0; const sev = (a.metadata && a.metadata.vulnerabilities) ? Object.entries(a.metadata.vulnerabilities).map(([k,v])=>`${k}:${v}`).join(', ') : ''; const out = `Directory: ${{ matrix.dir }}\nVulnerabilities: ${vuln}\nBy severity: ${sev}\n`; console.log(out); fs.writeFileSync('audit-${{ matrix.dir }}-summary.txt',out);}catch(e){console.error('Error parsing audit for ${{ matrix.dir }}',e); fs.writeFileSync('audit-${{ matrix.dir }}-summary.txt','parse error');}
+
+      - name: Upload audit artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-${{ matrix.dir }}
+          path: |
+            ${{ matrix.dir }}/audit-${{ matrix.dir }}.json
+            ${{ matrix.dir }}/audit-${{ matrix.dir }}-summary.txt
