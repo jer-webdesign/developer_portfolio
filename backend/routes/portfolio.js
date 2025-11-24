@@ -17,6 +17,16 @@ try {
   console.error('Error loading developer.json:', error);
 }
 
+// Expose raw developer.json for client-side static fetches
+router.get('/developer.json', (req, res) => {
+  try {
+    return res.json(defaultData);
+  } catch (err) {
+    console.error('Error serving developer.json:', err);
+    return res.status(500).json({ success: false, message: 'Failed to load developer data' });
+  }
+});
+
 // Middleware to check if user is authenticated (optional authentication)
 const optionalAuth = (req, res, next) => {
   const token = req.headers.authorization?.split(' ')[1] || req.cookies?.accessToken;

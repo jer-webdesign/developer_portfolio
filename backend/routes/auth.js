@@ -135,10 +135,12 @@ router.post('/login', authLimiter, loginValidation, (req, res, next) => {
       const refreshToken = await user.generateRefreshToken();
 
       // Set refresh token as HttpOnly cookie
+      // Use SameSite=None and secure to allow cross-origin SPA requests (frontend on different port/origin)
+      // Browsers require 'secure' when SameSite=None.
       res.cookie('refreshToken', refreshToken, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
-        sameSite: 'strict',
+        secure: true,
+        sameSite: 'none',
         maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
       });
 
@@ -240,7 +242,8 @@ router.post('/logout', passport.authenticate('jwt', { session: false }), async (
       }
     }
 
-    res.clearCookie('refreshToken');
+    // Clear cookie with matching attributes to ensure browser removes it
+    res.clearCookie('refreshToken', { httpOnly: true, secure: true, sameSite: 'none' });
     res.json({ 
       success: true, 
       message: 'Logout successful' 
@@ -289,10 +292,11 @@ router.get('/google/callback',
       const accessToken = req.user.generateAccessToken();
       const refreshToken = await req.user.generateRefreshToken();
 
+      // Set refresh cookie for OAuth callback similarly to allow SPA to use refresh flow
       res.cookie('refreshToken', refreshToken, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
-        sameSite: 'strict',
+        secure: true,
+        sameSite: 'none',
         maxAge: 7 * 24 * 60 * 60 * 1000
       });
 

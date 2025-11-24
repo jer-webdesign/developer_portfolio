@@ -8,50 +8,162 @@ const BlogPost = require('../models/BlogPost');
 // ==================== USER ROUTES ====================
 
 // @route   GET /api/profile
-// @desc    Get current user profile
+// @desc    Get current user profile (decrypt sensitive fields before returning)
 // @access  Private (User)
-router.get('/profile', authenticate, (req, res) => {
-  res.json({
-    success: true,
-    user: req.user
-  });
+router.get('/profile', authenticate, async (req, res) => {
+  try {
+    const user = await User.findById(req.user._id).select('-passwordHash -security');
+    if (!user) return res.status(404).json({ success: false, message: 'User not found' });
+
+    // Decrypt encrypted fields if present. If decryption fails (e.g., missing key),
+    // do not throw an internal error—hide encrypted content and continue, but
+    // log a clear warning to help operators configure the environment.
+    try {
+      const { decrypt } = require('../services/encryptionService');
+      if (user.profile?.bioEncrypted) {
+        try {
+          user.profile.bio = decrypt(user.profile.bioEncrypted);
+        } catch (dErr) {
+          console.warn('Decryption warning: unable to decrypt bio (check ENCRYPTION_KEY)');
+          user.profile.bio = undefined;
+        }
+      }
+      if (user.profile?.publicEmailEncrypted) {
+        try {
+          user.profile.publicEmail = decrypt(user.profile.publicEmailEncrypted);
+        } catch (dErr) {
+          console.warn('Decryption warning: unable to decrypt publicEmail (check ENCRYPTION_KEY)');
+          user.profile.publicEmail = undefined;
+        }
+      }
+    } catch (err) {
+      // If the encryption service cannot be required for some reason, warn and continue
+      console.warn('Decryption warning: encryption service unavailable', err.message);
+      if (user.profile) {
+        user.profile.bio = undefined;
+        user.profile.publicEmail = undefined;
+      }
+    }
+
+    res.json({ success: true, user });
+  } catch (error) {
+    res.status(500).json({ success: false, message: 'Failed to load profile', error: error.message });
+  }
 });
 
 // @route   PUT /api/profile
 // @desc    Update user profile
 // @access  Private (User)
-router.put('/profile', authenticate, async (req, res) => {
-  try {
-    const userId = req.user._id;
-    const updates = req.body;
+const { body, validationResult } = require('express-validator');
 
-    // Prevent updating sensitive fields
-    delete updates.passwordHash;
-    delete updates.role;
-    delete updates.security;
-    delete updates.authProvider;
-    delete updates.googleId;
-    delete updates.email;
+// @route   PUT /api/profile
+// @desc    Update user profile with validation, sanitization and encryption
+// @access  Private (User)
+router.put('/profile', authenticate,
+  // Validation rules
+  body('profile.firstName').optional().isLength({ min: 3, max: 50 }).matches(/^[A-Za-z ]+$/).withMessage('First name must be 3-50 alphabetic characters'),
+  body('profile.lastName').optional().isLength({ min: 3, max: 50 }).matches(/^[A-Za-z ]+$/).withMessage('Last name must be 3-50 alphabetic characters'),
+  body('profile.firstName').optional().isLength({ min: 3, max: 50 }).matches(/^[\p{L} ]+$/u).withMessage('First name must be 3-50 alphabetic characters'),
+  body('profile.lastName').optional().isLength({ min: 3, max: 50 }).matches(/^[\p{L} ]+$/u).withMessage('Last name must be 3-50 alphabetic characters'),
+  body('profile.publicEmail').optional().isEmail().withMessage('Invalid email'),
+  body('profile.bio').optional().isLength({ max: 500 }).matches(/^[\p{L}\p{N} .,'\-()?!:;]*$/u).withMessage('Bio contains invalid characters (letters, numbers and basic punctuation only)'),
+  async (req, res) => {
+    try {
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        return res.status(400).json({ success: false, errors: errors.array() });
+      }
 
-    const user = await User.findByIdAndUpdate(
-      userId,
-      { $set: updates },
-      { new: true, runValidators: true }
-    );
+      const userId = req.user._id;
+      const updates = req.body || {};
 
-    res.json({
-      success: true,
-      message: 'Profile updated successfully',
-      user
-    });
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: 'Failed to update profile',
-      error: error.message
-    });
+      // Prevent updating sensitive fields
+      delete updates.passwordHash;
+      delete updates.role;
+      delete updates.security;
+      delete updates.authProvider;
+      delete updates.googleId;
+      delete updates.email;
+
+      // Sanitize inputs - basic server-side sanitization
+      const validatorLib = require('validator');
+      if (updates.profile) {
+        if (typeof updates.profile.firstName === 'string') {
+          updates.profile.firstName = validatorLib.trim(updates.profile.firstName);
+          updates.profile.firstName = validatorLib.escape(updates.profile.firstName);
+        }
+        if (typeof updates.profile.lastName === 'string') {
+          updates.profile.lastName = validatorLib.trim(updates.profile.lastName);
+          updates.profile.lastName = validatorLib.escape(updates.profile.lastName);
+        }
+      }
+
+      // Handle encryption for sensitive fields (bio, publicEmail)
+      const { encrypt } = require('../services/encryptionService');
+      const user = await User.findById(userId);
+      if (!user) return res.status(404).json({ success: false, message: 'User not found' });
+
+      // If encryption key is not configured, prevent storing sensitive fields
+      if (!process.env.ENCRYPTION_KEY && ((updates.profile && typeof updates.profile.bio === 'string') || (updates.profile && typeof updates.profile.publicEmail === 'string'))) {
+        return res.status(500).json({ success: false, message: 'Server misconfiguration: ENCRYPTION_KEY not set. Cannot store sensitive profile fields until encryption key is configured.' });
+      }
+
+      if (updates.profile && typeof updates.profile.bio === 'string') {
+        // Strip tags server-side before encrypting and remove disallowed characters
+        const raw = validatorLib.stripLow(validatorLib.trim(updates.profile.bio), true);
+        const noTags = raw.replace(/<[^>]*>/g, '');
+        // allow ASCII letters, numbers, spaces and a small set of punctuation: . , ' - ( ) ? ! : ;
+        const cleaned = noTags.replace(/[^A-Za-z0-9 .,'\-()?!:;]+/g, '');
+        const truncated = cleaned.length > 500 ? cleaned.slice(0, 500) : cleaned;
+        const encrypted = encrypt(truncated);
+        user.profile.bioEncrypted = encrypted;
+        // Do not store plaintext bio
+        if (user.profile && user.profile.bio) user.profile.bio = undefined;
+      }
+
+      if (updates.profile && typeof updates.profile.publicEmail === 'string') {
+        // Normalize email but preserve Gmail dots (users may want visible dots preserved)
+        const cleaned = validatorLib.normalizeEmail(updates.profile.publicEmail, { gmail_remove_dots: false, gmail_remove_subaddress: false, gmail_convert_googlemail: false });
+        const encryptedEmail = encrypt(cleaned);
+        user.profile.publicEmailEncrypted = encryptedEmail;
+        if (user.profile.publicEmail) user.profile.publicEmail = undefined;
+      }
+
+      // Merge allowed profile updates (non-sensitive) into user.profile
+      if (updates.profile) {
+        const allowed = ['firstName', 'lastName', 'location', 'githubUrl', 'linkedinUrl', 'headline', 'subheadlines'];
+        allowed.forEach(k => {
+          if (updates.profile[k] !== undefined) {
+            user.profile[k] = updates.profile[k];
+          }
+        });
+      }
+
+      // Apply other top-level allowed updates (preferences, social, etc.)
+      if (updates.preferences) {
+        user.preferences = { ...user.preferences, ...updates.preferences };
+      }
+      if (updates.social) {
+        user.social = { ...user.social, ...updates.social };
+      }
+
+      await user.save();
+
+      // Decrypt fields for response
+      try {
+        const { decrypt } = require('../services/encryptionService');
+        if (user.profile?.bioEncrypted) user.profile.bio = decrypt(user.profile.bioEncrypted);
+        if (user.profile?.publicEmailEncrypted) user.profile.publicEmail = decrypt(user.profile.publicEmailEncrypted);
+      } catch (err) {
+        console.error('Decryption after save failed:', err.message);
+      }
+
+      res.json({ success: true, message: 'Profile updated successfully', user });
+    } catch (error) {
+      res.status(500).json({ success: false, message: 'Failed to update profile', error: error.message });
+    }
   }
-});
+);
 
 // @route   GET /api/dashboard
 // @desc    Get user dashboard data

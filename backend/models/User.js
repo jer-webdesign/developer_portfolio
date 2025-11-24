@@ -48,6 +48,8 @@ const userSchema = new mongoose.Schema({
     firstName: String,
     lastName: String,
     bio: String,
+    // Encrypted storage for sensitive fields (AES-256-GCM)
+    bioEncrypted: String,
     profilePicture: String,
     location: String,
     website: String,
@@ -63,6 +65,8 @@ const userSchema = new mongoose.Schema({
     }],
     phone: String, // Contact phone number
     publicEmail: String // Public contact email (can be different from login email)
+    ,
+    publicEmailEncrypted: String
   },
   skills: [{
     category: {

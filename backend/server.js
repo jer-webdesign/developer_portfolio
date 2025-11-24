@@ -112,8 +112,8 @@ const sslOptions = {
 const server = https.createServer(sslOptions, app);
 
 server.listen(PORT, () => {
-  console.log(`HTTPS Server running on https://localhost:${PORT}`);
-  console.log(`Environment: ${process.env.NODE_ENV}`);
+  console.log(`🔒 HTTPS Server running on https://localhost:${PORT}`);
+  console.log(`🌍 Environment: ${process.env.NODE_ENV}`);
   console.log('MongoDB Connected Successfully');
 });
 
@@ -126,6 +126,5 @@ process.on('SIGTERM', async () => {
     process.exit(0);
   });
 });
-
 
 module.exports = app;
