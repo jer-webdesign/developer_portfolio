@@ -2,14 +2,20 @@ const request = require('supertest');
 const app = require('../server');
 const User = require('../models/User');
 const mongoose = require('mongoose');
+const { MongoMemoryServer } = require('mongodb-memory-server');
 
 describe('Authentication Tests', () => {
+  let mongod;
+
   beforeAll(async () => {
-    await mongoose.connect(process.env.MONGODB_TEST_URI);
+    mongod = await MongoMemoryServer.create();
+    const uri = mongod.getUri();
+    await mongoose.connect(uri);
   });
 
   afterAll(async () => {
-    await mongoose.connection.close();
+    await mongoose.disconnect();
+    if (mongod) await mongod.stop();
   });
 
   beforeEach(async () => {

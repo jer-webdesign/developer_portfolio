@@ -15,6 +15,11 @@ const connectDB = async () => {
 
   } catch (error) {
     console.error('MongoDB connection failed:', error.message);
+    // During tests we don't want to forcibly exit the process; throw or return.
+    if (process.env.NODE_ENV === 'test' || process.env.JEST_WORKER_ID) {
+      // Let the test harness handle connection failures.
+      return;
+    }
     process.exit(1);
   }
 };

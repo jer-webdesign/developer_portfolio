@@ -8,7 +8,7 @@ class EmailService {
 
   initializeTransporter() {
     // Create transporter based on environment
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test') {
       // For development, we'll just log emails to console
       this.transporter = {
         sendMail: (mailOptions) => {

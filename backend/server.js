@@ -21,8 +21,35 @@ const adminRoutes = require('./routes/admin');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Connect to MongoDB
-connectDB();
+// Connect to MongoDB and start server only when not running tests
+if (process.env.NODE_ENV !== 'test') {
+  connectDB();
+
+  // SSL certificate paths
+  const sslOptions = {
+    key: fs.readFileSync(path.join(__dirname, 'ssl', 'server.key')),
+    cert: fs.readFileSync(path.join(__dirname, 'ssl', 'server.cert'))
+  };
+
+  // Create HTTPS server
+  const server = https.createServer(sslOptions, app);
+
+  server.listen(PORT, () => {
+    console.log(`\u{1F512} HTTPS Server running on https://localhost:${PORT}`);
+    console.log(`\u{1F30D} Environment: ${process.env.NODE_ENV}`);
+    console.log('MongoDB Connected Successfully');
+  });
+
+  // Graceful shutdown
+  process.on('SIGTERM', async () => {
+    console.log('SIGTERM received, shutting down gracefully...');
+    server.close(async () => {
+      await require('mongoose').connection.close();
+      console.log('Server and database connections closed');
+      process.exit(0);
+    });
+  });
+}
 
 // Security middleware
 app.use(helmet({
@@ -99,31 +126,6 @@ app.use((req, res) => {
   res.status(404).json({
     success: false,
     message: 'Route not found'
-  });
-});
-
-// SSL certificate paths
-const sslOptions = {
-  key: fs.readFileSync(path.join(__dirname, 'ssl', 'server.key')),
-  cert: fs.readFileSync(path.join(__dirname, 'ssl', 'server.cert'))
-};
-
-// Create HTTPS server
-const server = https.createServer(sslOptions, app);
-
-server.listen(PORT, () => {
-  console.log(`🔒 HTTPS Server running on https://localhost:${PORT}`);
-  console.log(`🌍 Environment: ${process.env.NODE_ENV}`);
-  console.log('MongoDB Connected Successfully');
-});
-
-// Graceful shutdown
-process.on('SIGTERM', async () => {
-  console.log('SIGTERM received, shutting down gracefully...');
-  server.close(async () => {
-    await require('mongoose').connection.close();
-    console.log('Server and database connections closed');
-    process.exit(0);
   });
 });
 

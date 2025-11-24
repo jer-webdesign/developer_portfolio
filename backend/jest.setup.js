@@ -1,8 +1,5 @@
-// Jest setup file
+// Jest setup file - load test environment variables
 require('dotenv').config({ path: '.env.test' });
 
-// Override MONGODB_URI for tests
-process.env.MONGODB_URI = process.env.MONGODB_TEST_URI;
-
-// Set test timeout
+// Keep a reasonable default timeout for longer integration tests
 jest.setTimeout(30000);
