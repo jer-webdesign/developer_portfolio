@@ -1,0 +1,2772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZAP by Checkmarx Scanning Report</title>
+<link
+	href="zap-report-latest2/normalize/normalize.css" rel="stylesheet">
+<link
+	href="zap-report-latest2/themes/original/main.css" rel="stylesheet">
+<link
+	href="zap-report-latest2/themes/original/colors.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1>ZAP by Checkmarx Scanning Report</h1>
+		<p>
+			<span>Generated with</span> <a href="https://zaproxy.org"><img
+				src="zap-report-latest2/zap32x32.png" alt="The ZAP logo" class="zap-logo">ZAP</a>
+			<span>on Fri 5 Dec 2025, at 18:02:04</span>
+		</p>
+		<p>ZAP Version: 2.16.1</p>
+		<p>
+			ZAP by <a href="https://checkmarx.com/">Checkmarx</a>
+		</p>
+	</header>
+
+	<main>
+
+		<section id="contents" class="contents">
+			<h2>Contents</h2>
+			<nav>
+				<ol>
+					<li><a
+						href="#about-this-report">About This Report</a>
+						<ol>
+							
+							<li><a
+								href="#report-parameters">Report Parameters</a></li>
+						</ol></li>
+					<data-th-block>
+					<li><a
+						href="#summaries">Summaries</a>
+						<ol>
+							<li><a
+								href="#risk-confidence-counts">Alert Counts by Risk and Confidence</a></li>
+							<li><a
+								href="#site-risk-counts">Alert Counts by Site and Risk</a></li>
+							<li><a
+								href="#alert-type-counts">Alert Counts by Alert Type</a></li>
+						</ol></li>
+					<li><a
+						href="#alerts">Alerts</a>
+						<ol>
+							
+							 
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-2-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Medium</span>, <span>Confidence</span>=<span
+									class="confidence-level">High</span> <span>(4)</span></a></li>
+							
+							
+							
+							
+							  
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-1-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Low</span>, <span>Confidence</span>=<span
+									class="confidence-level">High</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-1-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Low</span>, <span>Confidence</span>=<span
+									class="confidence-level">Medium</span> <span>(1)</span></a></li>
+							
+							
+							  
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-0-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Informational</span>, <span>Confidence</span>=<span
+									class="confidence-level">High</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-0-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Informational</span>, <span>Confidence</span>=<span
+									class="confidence-level">Medium</span> <span>(3)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-0-confidence-1"><span>Risk</span>=<span
+									class="risk-level">Informational</span>, <span>Confidence</span>=<span
+									class="confidence-level">Low</span> <span>(2)</span></a></li>
+							  
+						</ol></li>
+					<li><a
+						href="#appendix">Appendix</a>
+						<ol>
+							<li><a
+								href="#alert-types">Alert Types</a></li>
+						</ol></li>
+					</data-th-block>
+				</ol>
+			</nav>
+		</section>
+
+		<section
+			id="about-this-report" class="about-this-report">
+			<h2>About This Report</h2>
+
+			
+
+			<section
+				id="report-parameters">
+				<h3>Report Parameters</h3>
+				<div class="report-parameters--container">
+					<h4>Contexts</h4>
+					
+					
+					<p>No contexts were selected, so all contexts were included by default.</p>
+					  
+
+					<h4>Sites</h4>
+					
+					<p>The following sites were included:</p>
+					<ul class="sites-list">
+						<li><span class="site">https://www.google.com</span></li>
+						<li><span class="site">https://accounts.google.com</span></li>
+						<li><span class="site">https://localhost:5173</span></li>
+					</ul>
+					
+					<p>(If no sites were selected, all sites were included by default.)</p>
+					<p>An included site must also be within one of the included contexts for its data to be included in the report.</p>
+
+					<h4>Risk levels</h4>
+					<p>
+						<span>Included</span>:
+						 
+						<span class="included-risk-codes"><span class="risk-level">High</span>, <span class="risk-level">Medium</span>, <span class="risk-level">Low</span>, <span class="risk-level">Informational</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						 <span>None</span>
+						
+					</p>
+
+					<h4>Confidence levels</h4>
+					<p>
+						<span>Included</span>:
+						
+						
+						<span class="included-confidence-codes"><span class="confidence-level">User Confirmed</span>, <span class="confidence-level">High</span>, <span class="confidence-level">Medium</span>, <span class="confidence-level">Low</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						
+						
+						<span class="included-confidence-codes"> <span class="confidence-level">User Confirmed</span>, <span class="confidence-level">High</span>, <span class="confidence-level">Medium</span>, <span class="confidence-level">Low</span>, <span class="confidence-level">False Positive</span></span>
+					</p>
+				</div>
+			</section>
+		</section>
+
+		
+		<section>
+			
+		</section>
+		
+		<section id="summaries" class="summaries">
+			<h2>Summaries</h2>
+
+			<section
+				id="risk-confidence-counts">
+				<h3>Alert Counts by Risk and Confidence</h3>
+				<table class="risk-confidence-counts-table">
+					<caption>
+						<p>This table shows the number of alerts for each level of risk and confidence included in the report.</p>
+						<p>(The percentages in brackets represent the count as a percentage of the total number of alerts included in the report, rounded to one decimal place.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col
+							style="width: 14.0%"><col
+							style="width: 14.0%"><col
+							style="width: 14.0%"><col
+							style="width: 14.0%">
+						<col style="width: 14.0%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup"
+								colspan="5">Confidence</th>
+						</tr>
+						<tr>
+							<th scope="col">User Confirmed</th>
+							<th scope="col">High</th>
+							<th scope="col">Medium</th>
+							<th scope="col">Low</th>
+							<th scope="col">Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup"
+								rowspan="5">Risk</th>
+							<th scope="row">High</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0.0%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Medium</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>4</span><br> <span
+								class="additional-info-percentages">(33.3%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>4</span><br> <span class="additional-info-percentages">(33.3%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Low</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(8.3%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(8.3%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>2</span><br> <span class="additional-info-percentages">(16.7%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Informational</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(8.3%)</span></td>
+							<td><span>3</span><br> <span
+								class="additional-info-percentages">(25.0%)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(16.7%)</span></td>
+							<td><span>6</span><br> <span class="additional-info-percentages">(50.0%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row">Total</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>6</span><br> <span
+								class="additional-info-percentages">(50.0%)</span></td>
+							<td><span>4</span><br> <span
+								class="additional-info-percentages">(33.3%)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(16.7%)</span></td>
+							<td><span>12</span><br> <span
+								class="additional-info-percentages">(100%)</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section
+				id="site-risk-counts">
+				<h3>Alert Counts by Site and Risk</h3>
+				<table class="site-risk-counts-table">
+					<caption>
+						<p>This table shows, for each site for which one or more alerts were raised, the number of alerts raised at each risk level.</p>
+						<p>Alerts with a confidence level of &quot;False Positive&quot; have been excluded from these counts.</p>
+						<p>(The numbers in brackets are the number of alerts raised for the site at or above that risk level.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col
+							style="width: 16.25%"><col
+							style="width: 16.25%"><col
+							style="width: 16.25%"><col
+							style="width: 16.25%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup" colspan="4">Risk</th>
+						</tr>
+						<tr>
+							<th scope="col">
+								<span>High</span><br>  <span
+									class="additional-info-percentages">(= High)</span>  
+							</th>
+							<th scope="col">
+								<span>Medium</span><br>   <span
+									class="additional-info-percentages">(&gt;= Medium)</span> 
+							</th>
+							<th scope="col">
+								<span>Low</span><br>   <span
+									class="additional-info-percentages">(&gt;= Low)</span> 
+							</th>
+							<th scope="col">
+								<span>Informational</span><br>   <span
+									class="additional-info-percentages">(&gt;= Informational)</span> 
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup"
+								rowspan="1">Site</th>
+							<th scope="row">https://localhost:5173</th>
+							
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>4</span><br> <span
+								class="additional-info-percentages">(4)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(6)</span></td>
+							<td><span>6</span><br> <span
+								class="additional-info-percentages">(12)</span></td>
+							
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section
+				id="alert-type-counts">
+				<h3>Alert Counts by Alert Type</h3>
+				<table class="alert-type-counts-table">
+					<caption>
+						<p>This table shows the number of alerts of each alert type, together with the alert type&#39;s risk level.</p>
+						<p>(The percentages in brackets represent each count as a percentage, rounded to one decimal place, of the total number of alerts included in this report.)</p>
+					</caption>
+					<thead>
+						<tr>
+							<th scope="col">Alert type</th>
+							<th scope="col">Risk</th>
+							<th scope="col">Count</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-0">CSP: Failure to Define Directive with No Fallback</a></th>
+							<td class="risk-level">Medium</td>
+							<td><span>5</span><br> <span
+								class="additional-info-percentages">(41.7%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-1">CSP: script-src unsafe-eval</a></th>
+							<td class="risk-level">Medium</td>
+							<td><span>5</span><br> <span
+								class="additional-info-percentages">(41.7%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-2">CSP: script-src unsafe-inline</a></th>
+							<td class="risk-level">Medium</td>
+							<td><span>10</span><br> <span
+								class="additional-info-percentages">(83.3%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-3">CSP: style-src unsafe-inline</a></th>
+							<td class="risk-level">Medium</td>
+							<td><span>10</span><br> <span
+								class="additional-info-percentages">(83.3%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-4">Application Error Disclosure</a></th>
+							<td class="risk-level">Low</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(8.3%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-5">Strict-Transport-Security Header Not Set</a></th>
+							<td class="risk-level">Low</td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(16.7%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-6">CSP: Header &amp; Meta</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>5</span><br> <span
+								class="additional-info-percentages">(41.7%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-7">Content-Type Header Missing</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(16.7%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-8">Information Disclosure - Sensitive Information in URL</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(8.3%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-9">Information Disclosure - Suspicious Comments</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>11</span><br> <span
+								class="additional-info-percentages">(91.7%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-10">Modern Web Application</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>5</span><br> <span
+								class="additional-info-percentages">(41.7%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-11">Re-examine Cache-control Directives</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>6</span><br> <span
+								class="additional-info-percentages">(50.0%)</span></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th scope="row">Total</th>
+							<td></td>
+							<td>12</td>
+						</tr>
+					</tfoot>
+				</table>
+			</section>
+		</section>
+
+		<section id="alerts" class="alerts">
+			<h2>Alerts</h2>
+			<ol>
+				
+				 
+				 
+				
+				
+				<li id="alerts--risk-2-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Medium</span>, <span>Confidence</span>=<span
+							class="confidence-level">High</span> <span>(4)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://localhost:5173</span> <span>(4)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-0">CSP: Failure to Define Directive with No Fallback</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://localhost:5173/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/693.html">CWE-693</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_DEV_STD = </span>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The Content Security Policy fails to define one of the directives that has no fallback. Missing/excluding them is the same as allowing anything.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>The directive(s): form-action is/are among the directives that do not fallback to default-src.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (230 bytes)</summary>
+				
+				<pre><code>GET https://localhost:5173/ HTTP/1.1
+host: localhost:5173
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (838 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Vary: Origin
+Content-Type: text/html
+Cache-Control: no-cache
+Etag: W/&quot;4a6-A5d5680nXsN7/fK04DhE3K0BpQM&quot;
+Content-Security-Policy: default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: https://localhost:3000; connect-src &#39;self&#39; https://localhost:3000 ws://localhost:5173 wss://localhost:5173; font-src &#39;self&#39;; object-src &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;self&#39;; frame-ancestors &#39;none&#39;;
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=(), camera=()
+Date: Sat, 06 Dec 2025 01:01:09 GMT
+Connection: keep-alive
+Content-Length: 1190
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (1190 bytes)</summary>
+				
+				<pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;script type=&quot;module&quot;&gt;import { injectIntoGlobalHook } from &quot;/@react-refresh&quot;;
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () =&gt; {};
+window.$RefreshSig$ = () =&gt; (type) =&gt; type;&lt;/script&gt;
+
+    &lt;script type=&quot;module&quot; src=&quot;/@vite/client&quot;&gt;&lt;/script&gt;
+
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/x-icon&quot; href=&quot;./dev_logo.ico&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;Developer Portfolio Project Showcase&quot; /&gt;
+    
+    &lt;!-- Note: Security headers are set by the backend server (Helmet.js) --&gt;
+    &lt;!-- CSP via meta tag is limited - only certain directives are allowed --&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: https://localhost:3000; connect-src &#39;self&#39; https://localhost:3000; font-src &#39;self&#39;;&quot; /&gt;
+    
+    &lt;title&gt;Developer Portfolio&lt;/title&gt;   
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+    &lt;script type=&quot;module&quot; src=&quot;/src/main.jsx&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>content-security-policy</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: https://localhost:3000; connect-src &#39;self&#39; https://localhost:3000; font-src &#39;self&#39;;</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-1">CSP: script-src unsafe-eval</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://localhost:5173/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/693.html">CWE-693</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_DEV_STD = </span>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>script-src includes unsafe-eval.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (230 bytes)</summary>
+				
+				<pre><code>GET https://localhost:5173/ HTTP/1.1
+host: localhost:5173
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (838 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Vary: Origin
+Content-Type: text/html
+Cache-Control: no-cache
+Etag: W/&quot;4a6-A5d5680nXsN7/fK04DhE3K0BpQM&quot;
+Content-Security-Policy: default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: https://localhost:3000; connect-src &#39;self&#39; https://localhost:3000 ws://localhost:5173 wss://localhost:5173; font-src &#39;self&#39;; object-src &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;self&#39;; frame-ancestors &#39;none&#39;;
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=(), camera=()
+Date: Sat, 06 Dec 2025 01:01:09 GMT
+Connection: keep-alive
+Content-Length: 1190
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (1190 bytes)</summary>
+				
+				<pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;script type=&quot;module&quot;&gt;import { injectIntoGlobalHook } from &quot;/@react-refresh&quot;;
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () =&gt; {};
+window.$RefreshSig$ = () =&gt; (type) =&gt; type;&lt;/script&gt;
+
+    &lt;script type=&quot;module&quot; src=&quot;/@vite/client&quot;&gt;&lt;/script&gt;
+
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/x-icon&quot; href=&quot;./dev_logo.ico&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;Developer Portfolio Project Showcase&quot; /&gt;
+    
+    &lt;!-- Note: Security headers are set by the backend server (Helmet.js) --&gt;
+    &lt;!-- CSP via meta tag is limited - only certain directives are allowed --&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: https://localhost:3000; connect-src &#39;self&#39; https://localhost:3000; font-src &#39;self&#39;;&quot; /&gt;
+    
+    &lt;title&gt;Developer Portfolio&lt;/title&gt;   
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+    &lt;script type=&quot;module&quot; src=&quot;/src/main.jsx&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>Content-Security-Policy</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: https://localhost:3000; connect-src &#39;self&#39; https://localhost:3000 ws://localhost:5173 wss://localhost:5173; font-src &#39;self&#39;; object-src &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;self&#39;; frame-ancestors &#39;none&#39;;</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-2">CSP: script-src unsafe-inline</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://localhost:5173/config/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/693.html">CWE-693</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_DEV_STD = </span>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>script-src includes unsafe-inline.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (281 bytes)</summary>
+				
+				<pre><code>GET https://localhost:5173/config/ HTTP/1.1
+host: localhost:5173
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+referer: https://localhost:5173/robots.txt
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (838 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Vary: Origin
+Content-Type: text/html
+Cache-Control: no-cache
+Etag: W/&quot;4a5-0ZBQVql+aJPg1k/NX3E8IRPLZGM&quot;
+Content-Security-Policy: default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: https://localhost:3000; connect-src &#39;self&#39; https://localhost:3000 ws://localhost:5173 wss://localhost:5173; font-src &#39;self&#39;; object-src &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;self&#39;; frame-ancestors &#39;none&#39;;
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=(), camera=()
+Date: Sat, 06 Dec 2025 01:01:09 GMT
+Connection: keep-alive
+Content-Length: 1189
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (1189 bytes)</summary>
+				
+				<pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;script type=&quot;module&quot;&gt;import { injectIntoGlobalHook } from &quot;/@react-refresh&quot;;
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () =&gt; {};
+window.$RefreshSig$ = () =&gt; (type) =&gt; type;&lt;/script&gt;
+
+    &lt;script type=&quot;module&quot; src=&quot;/@vite/client&quot;&gt;&lt;/script&gt;
+
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/x-icon&quot; href=&quot;/dev_logo.ico&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;Developer Portfolio Project Showcase&quot; /&gt;
+    
+    &lt;!-- Note: Security headers are set by the backend server (Helmet.js) --&gt;
+    &lt;!-- CSP via meta tag is limited - only certain directives are allowed --&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: https://localhost:3000; connect-src &#39;self&#39; https://localhost:3000; font-src &#39;self&#39;;&quot; /&gt;
+    
+    &lt;title&gt;Developer Portfolio&lt;/title&gt;   
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+    &lt;script type=&quot;module&quot; src=&quot;/src/main.jsx&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>Content-Security-Policy</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: https://localhost:3000; connect-src &#39;self&#39; https://localhost:3000 ws://localhost:5173 wss://localhost:5173; font-src &#39;self&#39;; object-src &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;self&#39;; frame-ancestors &#39;none&#39;;</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-3">CSP: style-src unsafe-inline</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://localhost:5173/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/693.html">CWE-693</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_DEV_STD = </span>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>style-src includes unsafe-inline.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (230 bytes)</summary>
+				
+				<pre><code>GET https://localhost:5173/ HTTP/1.1
+host: localhost:5173
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (838 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Vary: Origin
+Content-Type: text/html
+Cache-Control: no-cache
+Etag: W/&quot;4a6-A5d5680nXsN7/fK04DhE3K0BpQM&quot;
+Content-Security-Policy: default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: https://localhost:3000; connect-src &#39;self&#39; https://localhost:3000 ws://localhost:5173 wss://localhost:5173; font-src &#39;self&#39;; object-src &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;self&#39;; frame-ancestors &#39;none&#39;;
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=(), camera=()
+Date: Sat, 06 Dec 2025 01:01:09 GMT
+Connection: keep-alive
+Content-Length: 1190
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (1190 bytes)</summary>
+				
+				<pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;script type=&quot;module&quot;&gt;import { injectIntoGlobalHook } from &quot;/@react-refresh&quot;;
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () =&gt; {};
+window.$RefreshSig$ = () =&gt; (type) =&gt; type;&lt;/script&gt;
+
+    &lt;script type=&quot;module&quot; src=&quot;/@vite/client&quot;&gt;&lt;/script&gt;
+
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/x-icon&quot; href=&quot;./dev_logo.ico&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;Developer Portfolio Project Showcase&quot; /&gt;
+    
+    &lt;!-- Note: Security headers are set by the backend server (Helmet.js) --&gt;
+    &lt;!-- CSP via meta tag is limited - only certain directives are allowed --&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: https://localhost:3000; connect-src &#39;self&#39; https://localhost:3000; font-src &#39;self&#39;;&quot; /&gt;
+    
+    &lt;title&gt;Developer Portfolio&lt;/title&gt;   
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+    &lt;script type=&quot;module&quot; src=&quot;/src/main.jsx&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>Content-Security-Policy</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: https://localhost:3000; connect-src &#39;self&#39; https://localhost:3000 ws://localhost:5173 wss://localhost:5173; font-src &#39;self&#39;; object-src &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;self&#39;; frame-ancestors &#39;none&#39;;</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				
+				
+				
+				  
+				 
+				
+				
+				<li id="alerts--risk-1-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Low</span>, <span>Confidence</span>=<span
+							class="confidence-level">High</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://localhost:5173</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-5">Strict-Transport-Security Header Not Set</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://localhost:5173/?token=FGwM5Shfuzhv</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/319.html">CWE-319</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (469 bytes)</summary>
+				
+				<pre><code>GET https://localhost:5173/?token=FGwM5Shfuzhv HTTP/1.1
+host: localhost:5173
+Connection: Upgrade
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.0.0 Safari/537.36
+Upgrade: websocket
+Origin: https://localhost:5173
+Sec-WebSocket-Version: 13
+Accept-Language: en-US,en;q=0.9
+Sec-WebSocket-Key: +p1TD7CV9BQRvOEDniq2LQ==
+Sec-WebSocket-Protocol: vite-hmr
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (163 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: M5UiYQW7HMKcju/VwGLIJI1UXVg=
+Sec-WebSocket-Protocol: vite-hmr
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-1-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Low</span>, <span>Confidence</span>=<span
+							class="confidence-level">Medium</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://localhost:5173</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-4">Application Error Disclosure</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://localhost:5173/src/pages/CreatePortfolio/CreatePortfolio.jsx</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/02-Testing_for_Stack_Traces">WSTG-v42-ERRH-02</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_For_Improper_Error_Handling">WSTG-v42-ERRH-01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/550.html">CWE-550</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>This page contains an error/warning message that may disclose sensitive information like the location of the file that produced the unhandled exception. This information can be used to launch further attacks against the web application. The alert could be a false positive if the error message is found inside a documentation page.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (593 bytes)</summary>
+				
+				<pre><code>GET https://localhost:5173/src/pages/CreatePortfolio/CreatePortfolio.jsx HTTP/1.1
+host: localhost:5173
+Connection: keep-alive
+Origin: https://localhost:5173
+sec-ch-ua-platform: &quot;Windows&quot;
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.0.0 Safari/537.36
+sec-ch-ua: &quot;Google Chrome&quot;;v=&quot;143&quot;, &quot;Chromium&quot;;v=&quot;143&quot;, &quot;Not A(Brand&quot;;v=&quot;24&quot;
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: script
+Referer: https://localhost:5173/src/App.jsx
+Accept-Language: en-US,en;q=0.9
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (879 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 500 Internal Server Error
+Access-Control-Allow-Origin: https://localhost:5173
+Vary: Origin
+Content-Security-Policy: default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: https://localhost:3000; connect-src &#39;self&#39; https://localhost:3000 ws://localhost:5173 wss://localhost:5173; font-src &#39;self&#39;; object-src &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;self&#39;; frame-ancestors &#39;none&#39;;
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=(), camera=()
+Cache-Control: no-store, no-cache, must-revalidate, private
+Date: Sat, 06 Dec 2025 01:01:15 GMT
+Connection: keep-alive
+Content-Length: 51244
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (51244 bytes)</summary>
+				
+				<pre><code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang=&quot;en&quot;&gt;
+          &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot; /&gt;
+            &lt;title&gt;Error&lt;/title&gt;
+            &lt;script type=&quot;module&quot;&gt;
+              const error = {&quot;message&quot;:&quot;C:\\developer-portfolio-1205\\frontend\\src\\pages\\CreatePortfolio\\CreatePortfolio.jsx: Unexpected token (210:10)\n\n  208 |             // Update existing project            const response = await axiosInstance.put(`/api/my-projects/${project._id}`, projectData);          } else {\n  209 |             // Create new project            const response = await axiosInstance.post(&#39;/api/my-projects&#39;, projectData);          }\n&gt; 210 |         } catch (error) {          throw error; // Re-throw to be caught by outer catch\n      |           ^\n  211 |         }\n  212 |       }\n  213 |&quot;,&quot;stack&quot;:&quot;    at constructor (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:367:19)\n    at JSXParserMixin.raise (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:6630:19)\n    at JSXParserMixin.unexpected (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:6650:16)\n    at JSXParserMixin.parseExprAtom (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:11451:16)\n    at JSXParserMixin.parseExprAtom (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:4797:20)\n    at JSXParserMixin.parseExprSubscripts (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:11085:23)\n    at JSXParserMixin.parseUpdate (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:11070:21)\n    at JSXParserMixin.parseMaybeUnary (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:11050:23)\n    at JSXParserMixin.parseMaybeUnaryOrPrivate (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:10903:61)\n    at JSXParserMixin.parseExprOps (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:10908:23)\n    at JSXParserMixin.parseMaybeConditional (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:10885:23)\n    at JSXParserMixin.parseMaybeAssign (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:10835:21)\n    at JSXParserMixin.parseExpressionBase (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:10788:23)\n    at C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:10784:39\n    at JSXParserMixin.allowInAnd (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:12431:16)\n    at JSXParserMixin.parseExpression (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:10784:17)\n    at JSXParserMixin.parseStatementContent (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:12904:23)\n    at JSXParserMixin.parseStatementLike (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:12776:17)\n    at JSXParserMixin.parseStatementListItem (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:12756:17)\n    at JSXParserMixin.parseBlockOrModuleBlockBody (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:13325:61)\n    at JSXParserMixin.parseBlockBody (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:13318:10)\n    at JSXParserMixin.parseBlock (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:13306:10)\n    at JSXParserMixin.parseTryStatement (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:13214:23)\n    at JSXParserMixin.parseStatementContent (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:12813:21)\n    at JSXParserMixin.parseStatementLike (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:12776:17)\n    at JSXParserMixin.parseStatementListItem (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:12756:17)\n    at JSXParserMixin.parseBlockOrModuleBlockBody (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:13325:61)\n    at JSXParserMixin.parseBlockBody (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:13318:10)\n    at JSXParserMixin.parseBlock (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:13306:10)\n    at JSXParserMixin.parseStatementContent (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:12867:21)\n    at JSXParserMixin.parseStatementLike (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:12776:17)\n    at JSXParserMixin.parseStatement (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:12769:17)\n    at C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:13382:68\n    at JSXParserMixin.withSmartMixTopicForbiddingContext (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:12413:14)\n    at JSXParserMixin.parseForIn (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:13382:22)\n    at JSXParserMixin.parseForStatement (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:13096:23)\n    at JSXParserMixin.parseStatementContent (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:12794:21)\n    at JSXParserMixin.parseStatementLike (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:12776:17)\n    at JSXParserMixin.parseStatementListItem (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:12756:17)\n    at JSXParserMixin.parseBlockOrModuleBlockBody (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:13325:61)\n    at JSXParserMixin.parseBlockBody (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:13318:10)\n    at JSXParserMixin.parseBlock (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:13306:10)\n    at JSXParserMixin.parseTryStatement (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:13214:23)\n    at JSXParserMixin.parseStatementContent (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:12813:21)\n    at JSXParserMixin.parseStatementLike (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:12776:17)\n    at JSXParserMixin.parseStatementListItem (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:12756:17)\n    at JSXParserMixin.parseBlockOrModuleBlockBody (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:13325:61)\n    at JSXParserMixin.parseBlockBody (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:13318:10)\n    at JSXParserMixin.parseBlock (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:13306:10)\n    at JSXParserMixin.parseFunctionBody (C:\\developer-portfolio-1205\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:12110:24)&quot;,&quot;id&quot;:&quot;C:/developer-portfolio-1205/frontend/src/pages/CreatePortfolio/CreatePortfolio.jsx&quot;,&quot;frame&quot;:&quot;213 |  \n214 |        // Save blog posts (create or update)\n215 |        const validPosts = posts.filter(p =&gt; p.title &amp;&amp; p.title.trim() &amp;&amp; p.content &amp;&amp; p.content.trim());\n    |                                                                      ^\n216 |        for (const post of validPosts) {\n217 |          // Generate slug from title&quot;,&quot;plugin&quot;:&quot;vite:react-babel&quot;,&quot;pluginCode&quot;:&quot;import { useState, useEffect } from &#39;react&#39;;\r\nimport { useAuth } from &#39;../../contexts/AuthContext&#39;;\r\nimport axiosInstance from &#39;../../utils/axios&#39;;\r\nimport &#39;./CreatePortfolio.css&#39;;\r\n\r\nconst CreatePortfolio = () =&gt; {\r\n  const { user, isAdmin } = useAuth();\r\n  const [loading, setLoading] = useState(false);\r\n  const [saving, setSaving] = useState(false);\r\n  const [message, setMessage] = useState({ type: &#39;&#39;, text: &#39;&#39; });\r\n  const [activeTab, setActiveTab] = useState(&#39;home&#39;);\r\n  const [hasChanges, setHasChanges] = useState(false);\r\n\r\n  // Form states\r\n  const [homeData, setHomeData] = useState({\r\n    headline: &#39;&#39;,\r\n    subheadlines: [&#39;&#39;],\r\n    bio: &#39;&#39;,\r\n    githubUrl: &#39;&#39;,\r\n    linkedinUrl: &#39;&#39;\r\n  });\r\n\r\n  const [aboutData, setAboutData] = useState({\r\n    title: &#39;&#39;,\r\n    content: &#39;&#39;,\r\n    cards: [{ category: &#39;&#39;, content: &#39;&#39; }]\r\n  });\r\n\r\n  const [skillsData, setSkillsData] = useState([\r\n    { category: &#39;&#39;, items: [&#39;&#39;] }\r\n  ]);\r\n\r\n  const [contactData, setContactData] = useState({\r\n    publicEmail: &#39;&#39;,\r\n    phone: &#39;&#39;,\r\n    location: &#39;&#39;\r\n  });\r\n\r\n  const [projects, setProjects] = useState([\r\n    { title: &#39;&#39;, description: &#39;&#39;, technologies: [], githubUrl: &#39;&#39;, liveUrl: &#39;&#39;, imageUrl: &#39;&#39; }\r\n  ]);\r\n  \r\n  const [posts, setPosts] = useState([\r\n    { title: &#39;&#39;, excerpt: &#39;&#39;, content: &#39;&#39;, tags: [], imageUrl: &#39;&#39; }\r\n  ]);\r\n\r\n  // Load existing portfolio data\r\n  useEffect(() =&gt; {\r\n    loadPortfolioData();\r\n  }, []);\r\n\r\n  const loadPortfolioData = async () =&gt; {\r\n    setLoading(true);\r\n    try {\r\n      const response = await axiosInstance.get(&#39;/api/my-portfolio&#39;);\r\n      const { user: userData, projects: userProjects, posts: userPosts } = response.data.data;\r\n      // Load Home data\r\n      if (userData.profile) {\r\n        setHomeData({\r\n          headline: userData.profile.headline || &#39;&#39;,\r\n          subheadlines: userData.profile.subheadlines?.length &gt; 0 ? userData.profile.subheadlines : [&#39;&#39;],\r\n          bio: userData.profile.bio || &#39;&#39;,\r\n          githubUrl: userData.profile.githubUrl || &#39;&#39;,\r\n          linkedinUrl: userData.profile.linkedinUrl || &#39;&#39;\r\n        });\r\n\r\n        // Load About data\r\n        setAboutData({\r\n          title: userData.profile.aboutTitle || &#39;&#39;,\r\n          content: userData.profile.aboutContent || &#39;&#39;,\r\n          cards: userData.profile.aboutCards?.length &gt; 0 ? userData.profile.aboutCards : [{ category: &#39;&#39;, content: &#39;&#39; }]\r\n        });\r\n\r\n        // Load Contact data\r\n        setContactData({\r\n          publicEmail: userData.profile.publicEmail || &#39;&#39;,\r\n          phone: userData.profile.phone || &#39;&#39;,\r\n          location: userData.profile.location || &#39;&#39;\r\n        });\r\n      }\r\n\r\n      // Load Skills data\r\n      if (userData.skills?.length &gt; 0) {\r\n        setSkillsData(userData.skills.map(skill =&gt; ({\r\n          category: skill.category,\r\n          items: skill.items?.length &gt; 0 ? skill.items : [&#39;&#39;]\r\n        })));\r\n      }\r\n\r\n      // Load Projects and Posts      \r\n      // Transform projects from backend format to form format\r\n      const transformedProjects = userProjects?.map(p =&gt; ({\r\n        _id: p._id,\r\n        title: p.title || &#39;&#39;,\r\n        description: p.description || &#39;&#39;,\r\n        technologies: p.technologies || [],\r\n        githubUrl: p.links?.github || &#39;&#39;,\r\n        liveUrl: p.links?.live || &#39;&#39;,\r\n        imageUrl: p.images?.[0]?.url || &#39;&#39;\r\n      })) || [];\r\n      \r\n      setProjects(transformedProjects.length &gt; 0 ? transformedProjects : [{ \r\n        title: &#39;&#39;, \r\n        description: &#39;&#39;, \r\n        technologies: [], \r\n        githubUrl: &#39;&#39;, \r\n        liveUrl: &#39;&#39;,\r\n        imageUrl: &#39;&#39;\r\n      }]);\r\n      \r\n      // Transform posts from backend format to form format\r\n      const transformedPosts = userPosts?.map(p =&gt; ({\r\n        _id: p._id,\r\n        slug: p.slug,\r\n        title: p.title || &#39;&#39;,\r\n        excerpt: p.excerpt || &#39;&#39;,\r\n        content: p.content || &#39;&#39;,\r\n        tags: p.tags || [],\r\n        imageUrl: p.featuredImage?.url || &#39;&#39;,\r\n        publishedAt: p.publishedAt\r\n      })) || [];\r\n      \r\n      setPosts(transformedPosts.length &gt; 0 ? transformedPosts : [{ \r\n        title: &#39;&#39;, \r\n        excerpt: &#39;&#39;, \r\n        content: &#39;&#39;, \r\n        tags: [], \r\n        imageUrl: &#39;&#39; \r\n      }]);\r\n\r\n      setMessage({ type: &#39;success&#39;, text: &#39;Portfolio data loaded successfully!&#39; });\r\n    } catch (error) {      setMessage({ type: &#39;error&#39;, text: &#39;Failed to load portfolio data&#39; });\r\n    } finally {\r\n      setLoading(false);\r\n    }\r\n  };\r\n\r\n  const handleSave = async () =&gt; {\r\n    setSaving(true);\r\n    setMessage({ type: &#39;&#39;, text: &#39;&#39; });\r\n\r\n    try {\r\n      // Check if user is authenticated\r\n      const token = localStorage.getItem(&#39;accessToken&#39;);\r\n      if (!token) {\r\n        setMessage({ type: &#39;error&#39;, text: &#39;You must be logged in to save your portfolio. Please log in and try again.&#39; });\r\n        setSaving(false);\r\n        return;\r\n      }\r\n\r\n      // Save profile and skills\r\n      const filteredSkills = skillsData\r\n        .filter(skill =&gt; skill.category.trim())\r\n        .map(skill =&gt; ({\r\n          category: skill.category,\r\n          items: skill.items.filter(item =&gt; item &amp;&amp; item.trim())\r\n        }))\r\n        .filter(skill =&gt; skill.items.length &gt; 0);\r\n\r\n      const portfolioPayload = {\r\n        profile: {\r\n          headline: homeData.headline || &#39;&#39;,\r\n          subheadlines: homeData.subheadlines.filter(s =&gt; s &amp;&amp; s.trim()),\r\n          bio: homeData.bio || &#39;&#39;,\r\n          githubUrl: homeData.githubUrl || &#39;&#39;,\r\n          linkedinUrl: homeData.linkedinUrl || &#39;&#39;,\r\n          aboutTitle: aboutData.title || &#39;&#39;,\r\n          aboutContent: aboutData.content || &#39;&#39;,\r\n          aboutCards: aboutData.cards\r\n            .filter(c =&gt; (c.category &amp;&amp; c.category.trim()) || (c.content &amp;&amp; c.content.trim()))\r\n            .map(c =&gt; ({ category: c.category, content: c.content })),\r\n          publicEmail: contactData.publicEmail || &#39;&#39;,\r\n          phone: contactData.phone || &#39;&#39;,\r\n          location: contactData.location || &#39;&#39;\r\n        },\r\n        skills: filteredSkills,\r\n        social: {\r\n          github: homeData.githubUrl || &#39;&#39;,\r\n          linkedin: homeData.linkedinUrl || &#39;&#39;,\r\n          twitter: &#39;&#39;,\r\n          website: &#39;&#39;\r\n        }\r\n      };      \r\n      await axiosInstance.put(&#39;/api/my-portfolio&#39;, portfolioPayload);\r\n\r\n      // Save projects (create or update)\r\n      const validProjects = projects.filter(p =&gt; p.title &amp;&amp; p.title.trim() &amp;&amp; p.description &amp;&amp; p.description.trim());      \r\n      for (const project of validProjects) {\r\n        // Transform project data to match backend schema\r\n        const projectData = {\r\n          title: project.title,\r\n          description: project.description,\r\n          technologies: project.technologies || [],\r\n          links: {\r\n            github: project.githubUrl || &#39;&#39;,\r\n            live: project.liveUrl || &#39;&#39;\r\n          },\r\n          images: project.imageUrl ? [{\r\n            url: project.imageUrl,\r\n            alt: project.title,\r\n            isPrimary: true\r\n          }] : [],\r\n          status: &#39;completed&#39;, // Set status to completed so it shows up\r\n          featured: true // Make it featured by default\r\n        };\r\n        try {\r\n          if (project._id) {\r\n            // Update existing project            const response = await axiosInstance.put(`/api/my-projects/${project._id}`, projectData);          } else {\r\n            // Create new project            const response = await axiosInstance.post(&#39;/api/my-projects&#39;, projectData);          }\r\n        } catch (error) {          throw error; // Re-throw to be caught by outer catch\r\n        }\r\n      }\r\n\r\n      // Save blog posts (create or update)\r\n      const validPosts = posts.filter(p =&gt; p.title &amp;&amp; p.title.trim() &amp;&amp; p.content &amp;&amp; p.content.trim());\r\n      for (const post of validPosts) {\r\n        // Generate slug from title\r\n        const slug = post.slug || post.title.toLowerCase()\r\n          .replace(/[^\\w\\s-]/g, &#39;&#39;)\r\n          .replace(/\\s+/g, &#39;-&#39;)\r\n          .replace(/-+/g, &#39;-&#39;)\r\n          .trim();\r\n\r\n        // Transform post data to match backend schema\r\n        const postData = {\r\n          title: post.title,\r\n          slug: slug,\r\n          excerpt: post.excerpt || post.content.substring(0, 150) + &#39;...&#39;, // Use excerpt or first 150 chars\r\n          content: post.content,\r\n          tags: post.tags || [],\r\n          featuredImage: post.imageUrl ? {\r\n            url: post.imageUrl,\r\n            alt: post.title,\r\n            caption: &#39;&#39;\r\n          } : {\r\n            url: &#39;https://via.placeholder.com/800x400?text=Blog+Post&#39;,\r\n            alt: post.title,\r\n            caption: &#39;&#39;\r\n          },\r\n          status: &#39;published&#39;, // Set status to published so it shows up\r\n          publishedAt: post.publishedAt ? new Date(post.publishedAt).toISOString() : new Date().toISOString(),\r\n          categories: [&#39;tech&#39;] // Default category\r\n        };\r\n\r\n        if (post._id) {\r\n          // Update existing post\r\n          await axiosInstance.put(`/api/my-posts/${post._id}`, postData);\r\n        } else {\r\n          // Create new post\r\n          await axiosInstance.post(&#39;/api/my-posts&#39;, postData);\r\n        }\r\n      }\r\n\r\n      setMessage({ type: &#39;success&#39;, text: &#39;Portfolio saved successfully! Refreshing...&#39; });\r\n      setHasChanges(false);\r\n\r\n      // Auto hard refresh after 1 second\r\n      setTimeout(() =&gt; {\r\n        window.location.reload(true);\r\n      }, 1000);\r\n    } catch (error) {      const errorMessage = error.response?.data?.error || error.message || &#39;Failed to save portfolio&#39;;\r\n      setMessage({ type: &#39;error&#39;, text: errorMessage });\r\n      setSaving(false);\r\n    }\r\n  };\r\n\r\n  const handleCancel = () =&gt; {\r\n    if (hasChanges &amp;&amp; !window.confirm(&#39;You have unsaved changes. Are you sure you want to cancel?&#39;)) {\r\n      return;\r\n    }\r\n    loadPortfolioData();\r\n    setHasChanges(false);\r\n    setMessage({ type: &#39;info&#39;, text: &#39;Changes cancelled&#39; });\r\n  };\r\n\r\n  const handleDelete = async () =&gt; {\r\n    if (!window.confirm(&#39;Are you sure you want to delete all your portfolio data? This action cannot be undone.&#39;)) {\r\n      return;\r\n    }\r\n\r\n    setSaving(true);\r\n    try {\r\n      await axiosInstance.put(&#39;/api/my-portfolio&#39;, {\r\n        profile: {\r\n          headline: &#39;&#39;,\r\n          subheadlines: [],\r\n          bio: &#39;&#39;,\r\n          githubUrl: &#39;&#39;,\r\n          linkedinUrl: &#39;&#39;,\r\n          aboutTitle: &#39;&#39;,\r\n          aboutContent: &#39;&#39;,\r\n          aboutCards: [],\r\n          publicEmail: &#39;&#39;,\r\n          phone: &#39;&#39;,\r\n          location: &#39;&#39;\r\n        },\r\n        skills: []\r\n      });\r\n\r\n      setMessage({ type: &#39;success&#39;, text: &#39;Portfolio deleted successfully! Refreshing...&#39; });\r\n      setTimeout(() =&gt; {\r\n        window.location.reload();\r\n      }, 1000);\r\n    } catch (error) {      setMessage({ type: &#39;error&#39;, text: &#39;Failed to delete portfolio&#39; });\r\n      setSaving(false);\r\n    }\r\n  };\r\n\r\n  // Home Section Handlers\r\n  const addSubheadline = () =&gt; {\r\n    setHomeData({ ...homeData, subheadlines: [...homeData.subheadlines, &#39;&#39;] });\r\n    setHasChanges(true);\r\n  };\r\n\r\n  const removeSubheadline = (index) =&gt; {\r\n    setHomeData({\r\n      ...homeData,\r\n      subheadlines: homeData.subheadlines.filter((_, i) =&gt; i !== index)\r\n    });\r\n    setHasChanges(true);\r\n  };\r\n\r\n  const updateSubheadline = (index, value) =&gt; {\r\n    const updated = [...homeData.subheadlines];\r\n    updated[index] = value;\r\n    setHomeData({ ...homeData, subheadlines: updated });\r\n    setHasChanges(true);\r\n  };\r\n\r\n  // About Section Handlers\r\n  const addAboutCard = () =&gt; {\r\n    setAboutData({\r\n      ...aboutData,\r\n      cards: [...aboutData.cards, { category: &#39;&#39;, content: &#39;&#39; }]\r\n    });\r\n    setHasChanges(true);\r\n  };\r\n\r\n  const removeAboutCard = (index) =&gt; {\r\n    setAboutData({\r\n      ...aboutData,\r\n      cards: aboutData.cards.filter((_, i) =&gt; i !== index)\r\n    });\r\n    setHasChanges(true);\r\n  };\r\n\r\n  const updateAboutCard = (index, field, value) =&gt; {\r\n    const updated = [...aboutData.cards];\r\n    updated[index][field] = value;\r\n    setAboutData({ ...aboutData, cards: updated });\r\n    setHasChanges(true);\r\n  };\r\n\r\n  // Skills Section Handlers\r\n  const addSkillCategory = () =&gt; {\r\n    setSkillsData([...skillsData, { category: &#39;&#39;, items: [&#39;&#39;] }]);\r\n    setHasChanges(true);\r\n  };\r\n\r\n  const removeSkillCategory = (index) =&gt; {\r\n    setSkillsData(skillsData.filter((_, i) =&gt; i !== index));\r\n    setHasChanges(true);\r\n  };\r\n\r\n  const updateSkillCategory = (index, value) =&gt; {\r\n    const updated = [...skillsData];\r\n    updated[index].category = value;\r\n    setSkillsData(updated);\r\n    setHasChanges(true);\r\n  };\r\n\r\n  const addSkillItem = (categoryIndex) =&gt; {\r\n    const updated = [...skillsData];\r\n    updated[categoryIndex].items.push(&#39;&#39;);\r\n    setSkillsData(updated);\r\n    setHasChanges(true);\r\n  };\r\n\r\n  const removeSkillItem = (categoryIndex, itemIndex) =&gt; {\r\n    const updated = [...skillsData];\r\n    updated[categoryIndex].items = updated[categoryIndex].items.filter((_, i) =&gt; i !== itemIndex);\r\n    setSkillsData(updated);\r\n    setHasChanges(true);\r\n  };\r\n\r\n  const updateSkillItem = (categoryIndex, itemIndex, value) =&gt; {\r\n    const updated = [...skillsData];\r\n    updated[categoryIndex].items[itemIndex] = value;\r\n    setSkillsData(updated);\r\n    setHasChanges(true);\r\n  };\r\n\r\n  if (loading) {\r\n    return (\r\n      \u003cdiv className=\&quot;create-portfolio-loading\&quot;&gt;\r\n        \u003cdiv className=\&quot;spinner\&quot;&gt;\u003c/div&gt;\r\n        \u003cp&gt;Loading your portfolio...\u003c/p&gt;\r\n      \u003c/div&gt;\r\n    );\r\n  }\r\n\r\n  return (\r\n    \u003cdiv className=\&quot;create-portfolio\&quot;&gt;\r\n      \u003cdiv className=\&quot;create-portfolio-header\&quot;&gt;\r\n        \u003ch1&gt;Create &amp; Manage Your Portfolio\u003c/h1&gt;\r\n        \u003cp&gt;Customize every section of your developer portfolio\u003c/p&gt;\r\n      \u003c/div&gt;\r\n\r\n      {message.text &amp;&amp; (\r\n        \u003cdiv className={`portfolio-message portfolio-message-${message.type}`}&gt;\r\n          {message.text}\r\n        \u003c/div&gt;\r\n      )}\r\n\r\n      {/* Tab Navigation */}\r\n      \u003cdiv className=\&quot;portfolio-tabs\&quot;&gt;\r\n        \u003cbutton\r\n          className={`portfolio-tab ${activeTab === &#39;home&#39; ? &#39;active&#39; : &#39;&#39;}`}\r\n          onClick={() =&gt; setActiveTab(&#39;home&#39;)}\r\n        &gt;\r\n          🏠 Home\r\n        \u003c/button&gt;\r\n        \u003cbutton\r\n          className={`portfolio-tab ${activeTab === &#39;about&#39; ? &#39;active&#39; : &#39;&#39;}`}\r\n          onClick={() =&gt; setActiveTab(&#39;about&#39;)}\r\n        &gt;\r\n          👤 About\r\n        \u003c/button&gt;\r\n        \u003cbutton\r\n          className={`portfolio-tab ${activeTab === &#39;skills&#39; ? &#39;active&#39; : &#39;&#39;}`}\r\n          onClick={() =&gt; setActiveTab(&#39;skills&#39;)}\r\n        &gt;\r\n          💡 Skills\r\n        \u003c/button&gt;\r\n        \u003cbutton\r\n          className={`portfolio-tab ${activeTab === &#39;projects&#39; ? &#39;active&#39; : &#39;&#39;}`}\r\n          onClick={() =&gt; setActiveTab(&#39;projects&#39;)}\r\n        &gt;\r\n          � Projects\r\n        \u003c/button&gt;\r\n        \u003cbutton\r\n          className={`portfolio-tab ${activeTab === &#39;blog&#39; ? &#39;active&#39; : &#39;&#39;}`}\r\n          onClick={() =&gt; setActiveTab(&#39;blog&#39;)}\r\n        &gt;\r\n          📝 Blog\r\n        \u003c/button&gt;\r\n        \u003cbutton\r\n          className={`portfolio-tab ${activeTab === &#39;contact&#39; ? &#39;active&#39; : &#39;&#39;}`}\r\n          onClick={() =&gt; setActiveTab(&#39;contact&#39;)}\r\n        &gt;\r\n          � Contact\r\n        \u003c/button&gt;\r\n      \u003c/div&gt;\r\n\r\n      {/* Tab Content */}\r\n      \u003cdiv className=\&quot;portfolio-content\&quot;&gt;\r\n        {/* HOME TAB */}\r\n        {activeTab === &#39;home&#39; &amp;&amp; (\r\n          \u003cdiv className=\&quot;portfolio-section\&quot;&gt;\r\n            \u003ch2&gt;Home Section\u003c/h2&gt;\r\n            \u003cp className=\&quot;section-description\&quot;&gt;Your landing page - make a strong first impression!\u003c/p&gt;\r\n\r\n            \u003cdiv className=\&quot;form-group\&quot;&gt;\r\n              \u003clabel&gt;Headline *\u003c/label&gt;\r\n              \u003cinput\r\n                type=\&quot;text\&quot;\r\n                placeholder=\&quot;e.g., JOHN DOE\&quot;\r\n                value={homeData.headline}\r\n                onChange={(e) =&gt; {\r\n                  setHomeData({ ...homeData, headline: e.target.value });\r\n                  setHasChanges(true);\r\n                }}\r\n                className=\&quot;form-input\&quot;\r\n              /&gt;\r\n              \u003csmall&gt;Your name or brand - displayed prominently\u003c/small&gt;\r\n            \u003c/div&gt;\r\n\r\n            \u003cdiv className=\&quot;form-group\&quot;&gt;\r\n              \u003clabel&gt;Typing Animation Texts *\u003c/label&gt;\r\n              {homeData.subheadlines.map((subheadline, index) =&gt; (\r\n                \u003cdiv key={index} className=\&quot;array-input-group\&quot;&gt;\r\n                  \u003cinput\r\n                    type=\&quot;text\&quot;\r\n                    placeholder={`e.g., Full Stack Developer`}\r\n                    value={subheadline}\r\n                    onChange={(e) =&gt; updateSubheadline(index, e.target.value)}\r\n                    className=\&quot;form-input\&quot;\r\n                  /&gt;\r\n                  {homeData.subheadlines.length &gt; 1 &amp;&amp; (\r\n                    \u003cbutton\r\n                      type=\&quot;button\&quot;\r\n                      onClick={() =&gt; removeSubheadline(index)}\r\n                      className=\&quot;btn-remove\&quot;\r\n                    &gt;\r\n                      ✕\r\n                    \u003c/button&gt;\r\n                  )}\r\n                \u003c/div&gt;\r\n              ))}\r\n              \u003cbutton type=\&quot;button\&quot; onClick={addSubheadline} className=\&quot;btn-add\&quot;&gt;\r\n                + Add Another Title\r\n              \u003c/button&gt;\r\n              \u003csmall&gt;Titles that rotate in the typing animation\u003c/small&gt;\r\n            \u003c/div&gt;\r\n\r\n            \u003cdiv className=\&quot;form-group\&quot;&gt;\r\n              \u003clabel&gt;Bio/Introduction *\u003c/label&gt;\r\n              \u003ctextarea\r\n                placeholder=\&quot;Tell visitors about yourself...\&quot;\r\n                value={homeData.bio}\r\n                onChange={(e) =&gt; {\r\n                  setHomeData({ ...homeData, bio: e.target.value });\r\n                  setHasChanges(true);\r\n                }}\r\n                className=\&quot;form-textarea\&quot;\r\n                rows=\&quot;5\&quot;\r\n              /&gt;\r\n              \u003csmall&gt;A brief introduction about yourself\u003c/small&gt;\r\n            \u003c/div&gt;\r\n\r\n            \u003cdiv className=\&quot;form-group\&quot;&gt;\r\n              \u003clabel&gt;GitHub URL\u003c/label&gt;\r\n              \u003cinput\r\n                type=\&quot;url\&quot;\r\n                placeholder=\&quot;https://github.com/yourusername\&quot;\r\n                value={homeData.githubUrl}\r\n                onChange={(e) =&gt; {\r\n                  setHomeData({ ...homeData, githubUrl: e.target.value });\r\n                  setHasChanges(true);\r\n                }}\r\n                className=\&quot;form-input\&quot;\r\n              /&gt;\r\n              \u003csmall&gt;Your GitHub profile link\u003c/small&gt;\r\n            \u003c/div&gt;\r\n\r\n            \u003cdiv className=\&quot;form-group\&quot;&gt;\r\n              \u003clabel&gt;LinkedIn URL\u003c/label&gt;\r\n              \u003cinput\r\n                type=\&quot;url\&quot;\r\n                placeholder=\&quot;https://linkedin.com/in/yourusername\&quot;\r\n                value={homeData.linkedinUrl}\r\n                onChange={(e) =&gt; {\r\n                  setHomeData({ ...homeData, linkedinUrl: e.target.value });\r\n                  setHasChanges(true);\r\n                }}\r\n                className=\&quot;form-input\&quot;\r\n              /&gt;\r\n              \u003csmall&gt;Your LinkedIn profile link\u003c/small&gt;\r\n            \u003c/div&gt;\r\n          \u003c/div&gt;\r\n        )}\r\n\r\n        {/* ABOUT TAB */}\r\n        {activeTab === &#39;about&#39; &amp;&amp; (\r\n          \u003cdiv className=\&quot;portfolio-section\&quot;&gt;\r\n            \u003ch2&gt;About Section\u003c/h2&gt;\r\n            \u003cp className=\&quot;section-description\&quot;&gt;Share your story and what makes you unique\u003c/p&gt;\r\n\r\n            \u003cdiv className=\&quot;form-group\&quot;&gt;\r\n              \u003clabel&gt;Section Title\u003c/label&gt;\r\n              \u003cinput\r\n                type=\&quot;text\&quot;\r\n                placeholder=\&quot;e.g., About Me\&quot;\r\n                value={aboutData.title}\r\n                onChange={(e) =&gt; {\r\n                  setAboutData({ ...aboutData, title: e.target.value });\r\n                  setHasChanges(true);\r\n                }}\r\n                className=\&quot;form-input\&quot;\r\n              /&gt;\r\n            \u003c/div&gt;\r\n\r\n            \u003cdiv className=\&quot;form-group\&quot;&gt;\r\n              \u003clabel&gt;About Content *\u003c/label&gt;\r\n              \u003ctextarea\r\n                placeholder=\&quot;Your detailed story, background, experience...\&quot;\r\n                value={aboutData.content}\r\n                onChange={(e) =&gt; {\r\n                  setAboutData({ ...aboutData, content: e.target.value });\r\n                  setHasChanges(true);\r\n                }}\r\n                className=\&quot;form-textarea\&quot;\r\n                rows=\&quot;6\&quot;\r\n              /&gt;\r\n              \u003csmall&gt;Your complete story and background\u003c/small&gt;\r\n            \u003c/div&gt;\r\n\r\n            \u003cdiv className=\&quot;form-group\&quot;&gt;\r\n              \u003clabel&gt;Feature Cards\u003c/label&gt;\r\n              \u003csmall&gt;Highlight your expertise, values, or focus areas\u003c/small&gt;\r\n              {aboutData.cards.map((card, index) =&gt; (\r\n                \u003cdiv key={index} className=\&quot;card-input-group\&quot;&gt;\r\n                  \u003cdiv className=\&quot;card-header\&quot;&gt;\r\n                    \u003ch4&gt;Card {index + 1}\u003c/h4&gt;\r\n                    {aboutData.cards.length &gt; 1 &amp;&amp; (\r\n                      \u003cbutton\r\n                        type=\&quot;button\&quot;\r\n                        onClick={() =&gt; removeAboutCard(index)}\r\n                        className=\&quot;btn-remove-card\&quot;\r\n                      &gt;\r\n                        Delete Card\r\n                      \u003c/button&gt;\r\n                    )}\r\n                  \u003c/div&gt;\r\n                  \u003cinput\r\n                    type=\&quot;text\&quot;\r\n                    placeholder=\&quot;Card Title (e.g., Frontend Expertise)\&quot;\r\n                    value={card.category}\r\n                    onChange={(e) =&gt; updateAboutCard(index, &#39;category&#39;, e.target.value)}\r\n                    className=\&quot;form-input\&quot;\r\n                  /&gt;\r\n                  \u003ctextarea\r\n                    placeholder=\&quot;Card description...\&quot;\r\n                    value={card.content}\r\n                    onChange={(e) =&gt; updateAboutCard(index, &#39;content&#39;, e.target.value)}\r\n                    className=\&quot;form-textarea\&quot;\r\n                    rows=\&quot;3\&quot;\r\n                  /&gt;\r\n                \u003c/div&gt;\r\n              ))}\r\n              \u003cbutton type=\&quot;button\&quot; onClick={addAboutCard} className=\&quot;btn-add\&quot;&gt;\r\n                + Add Feature Card\r\n              \u003c/button&gt;\r\n            \u003c/div&gt;\r\n          \u003c/div&gt;\r\n        )}\r\n\r\n        {/* SKILLS TAB */}\r\n        {activeTab === &#39;skills&#39; &amp;&amp; (\r\n          \u003cdiv className=\&quot;portfolio-section\&quot;&gt;\r\n            \u003ch2&gt;Skills Section\u003c/h2&gt;\r\n            \u003cp className=\&quot;section-description\&quot;&gt;Showcase your technical expertise and tools\u003c/p&gt;\r\n\r\n            {skillsData.map((skillCategory, catIndex) =&gt; (\r\n              \u003cdiv key={catIndex} className=\&quot;skill-category-group\&quot;&gt;\r\n                \u003cdiv className=\&quot;card-header\&quot;&gt;\r\n                  \u003ch4&gt;Skill Category {catIndex + 1}\u003c/h4&gt;\r\n                  {skillsData.length &gt; 1 &amp;&amp; (\r\n                    \u003cbutton\r\n                      type=\&quot;button\&quot;\r\n                      onClick={() =&gt; removeSkillCategory(catIndex)}\r\n                      className=\&quot;btn-remove-card\&quot;\r\n                    &gt;\r\n                      Delete Category\r\n                    \u003c/button&gt;\r\n                  )}\r\n                \u003c/div&gt;\r\n\r\n                \u003cdiv className=\&quot;form-group\&quot;&gt;\r\n                  \u003clabel&gt;Category Name *\u003c/label&gt;\r\n                  \u003cinput\r\n                    type=\&quot;text\&quot;\r\n                    placeholder=\&quot;e.g., 🔥 PROGRAMMING LANGUAGES\&quot;\r\n                    value={skillCategory.category}\r\n                    onChange={(e) =&gt; updateSkillCategory(catIndex, e.target.value)}\r\n                    className=\&quot;form-input\&quot;\r\n                  /&gt;\r\n                \u003c/div&gt;\r\n\r\n                \u003cdiv className=\&quot;form-group\&quot;&gt;\r\n                  \u003clabel&gt;Skills\u003c/label&gt;\r\n                  {skillCategory.items.map((item, itemIndex) =&gt; (\r\n                    \u003cdiv key={itemIndex} className=\&quot;array-input-group\&quot;&gt;\r\n                      \u003cinput\r\n                        type=\&quot;text\&quot;\r\n                        placeholder=\&quot;e.g., JavaScript\&quot;\r\n                        value={item}\r\n                        onChange={(e) =&gt; updateSkillItem(catIndex, itemIndex, e.target.value)}\r\n                        className=\&quot;form-input\&quot;\r\n                      /&gt;\r\n                      {skillCategory.items.length &gt; 1 &amp;&amp; (\r\n                        \u003cbutton\r\n                          type=\&quot;button\&quot;\r\n                          onClick={() =&gt; removeSkillItem(catIndex, itemIndex)}\r\n                          className=\&quot;btn-remove\&quot;\r\n                        &gt;\r\n                          ✕\r\n                        \u003c/button&gt;\r\n                      )}\r\n                    \u003c/div&gt;\r\n                  ))}\r\n                  \u003cbutton\r\n                    type=\&quot;button\&quot;\r\n                    onClick={() =&gt; addSkillItem(catIndex)}\r\n                    className=\&quot;btn-add-small\&quot;\r\n                  &gt;\r\n                    + Add Skill\r\n                  \u003c/button&gt;\r\n                \u003c/div&gt;\r\n              \u003c/div&gt;\r\n            ))}\r\n\r\n            \u003cbutton type=\&quot;button\&quot; onClick={addSkillCategory} className=\&quot;btn-add\&quot;&gt;\r\n              + Add Skill Category\r\n            \u003c/button&gt;\r\n          \u003c/div&gt;\r\n        )}\r\n\r\n        {/* CONTACT TAB */}\r\n        {activeTab === &#39;contact&#39; &amp;&amp; (\r\n          \u003cdiv className=\&quot;portfolio-section\&quot;&gt;\r\n            \u003ch2&gt;Contact Information\u003c/h2&gt;\r\n            \u003cp className=\&quot;section-description\&quot;&gt;How people can reach you\u003c/p&gt;\r\n\r\n            \u003cdiv className=\&quot;form-group\&quot;&gt;\r\n              \u003clabel&gt;Public Email\u003c/label&gt;\r\n              \u003cinput\r\n                type=\&quot;email\&quot;\r\n                placeholder=\&quot;contact@example.com\&quot;\r\n                value={contactData.publicEmail}\r\n                onChange={(e) =&gt; {\r\n                  setContactData({ ...contactData, publicEmail: e.target.value });\r\n                  setHasChanges(true);\r\n                }}\r\n                className=\&quot;form-input\&quot;\r\n              /&gt;\r\n              \u003csmall&gt;Display email (can be different from your login email)\u003c/small&gt;\r\n            \u003c/div&gt;\r\n\r\n            \u003cdiv className=\&quot;form-group\&quot;&gt;\r\n              \u003clabel&gt;Phone Number\u003c/label&gt;\r\n              \u003cinput\r\n                type=\&quot;tel\&quot;\r\n                placeholder=\&quot;+1 (555) 123-4567\&quot;\r\n                value={contactData.phone}\r\n                onChange={(e) =&gt; {\r\n                  setContactData({ ...contactData, phone: e.target.value });\r\n                  setHasChanges(true);\r\n                }}\r\n                className=\&quot;form-input\&quot;\r\n              /&gt;\r\n            \u003c/div&gt;\r\n\r\n            \u003cdiv className=\&quot;form-group\&quot;&gt;\r\n              \u003clabel&gt;Location\u003c/label&gt;\r\n              \u003cinput\r\n                type=\&quot;text\&quot;\r\n                placeholder=\&quot;City, State/Country\&quot;\r\n                value={contactData.location}\r\n                onChange={(e) =&gt; {\r\n                  setContactData({ ...contactData, location: e.target.value });\r\n                  setHasChanges(true);\r\n                }}\r\n                className=\&quot;form-input\&quot;\r\n              /&gt;\r\n            \u003c/div&gt;\r\n          \u003c/div&gt;\r\n        )}\r\n\r\n        {/* PROJECTS TAB */}\r\n        {activeTab === &#39;projects&#39; &amp;&amp; (\r\n          \u003cdiv className=\&quot;portfolio-section\&quot;&gt;\r\n            \u003ch2&gt;Projects\u003c/h2&gt;\r\n            \u003cp className=\&quot;section-description\&quot;&gt;Add and manage your project portfolio\u003c/p&gt;\r\n            \r\n            \u003cdiv className=\&quot;projects-manager\&quot;&gt;\r\n              {projects.map((project, index) =&gt; (\r\n                \u003cdiv key={index} className=\&quot;card\&quot;&gt;\r\n                  \u003cdiv className=\&quot;card-header\&quot;&gt;\r\n                    \u003ch3&gt;Project {index + 1}\u003c/h3&gt;\r\n                    {projects.length &gt; 1 &amp;&amp; (\r\n                      \u003cbutton\r\n                        type=\&quot;button\&quot;\r\n                        onClick={() =&gt; {\r\n                          const newProjects = projects.filter((_, i) =&gt; i !== index);\r\n                          setProjects(newProjects);\r\n                          setHasChanges(true);\r\n                        }}\r\n                        className=\&quot;btn-remove-card\&quot;\r\n                      &gt;\r\n                        Remove\r\n                      \u003c/button&gt;\r\n                    )}\r\n                  \u003c/div&gt;\r\n                  \u003cdiv className=\&quot;card-body\&quot;&gt;\r\n                    \u003cdiv className=\&quot;form-group\&quot;&gt;\r\n                      \u003clabel&gt;Project Title *\u003c/label&gt;\r\n                      \u003cinput\r\n                        type=\&quot;text\&quot;\r\n                        className=\&quot;form-input\&quot;\r\n                        placeholder=\&quot;e.g., E-commerce Platform\&quot;\r\n                        value={project.title || &#39;&#39;}\r\n                        onChange={(e) =&gt; {\r\n                          const newProjects = [...projects];\r\n                          newProjects[index].title = e.target.value;\r\n                          setProjects(newProjects);\r\n                          setHasChanges(true);\r\n                        }}\r\n                      /&gt;\r\n                    \u003c/div&gt;\r\n\r\n                    \u003cdiv className=\&quot;form-group\&quot;&gt;\r\n                      \u003clabel&gt;Description *\u003c/label&gt;\r\n                      \u003ctextarea\r\n                        className=\&quot;form-textarea\&quot;\r\n                        placeholder=\&quot;Describe your project, its purpose, and key features...\&quot;\r\n                        value={project.description || &#39;&#39;}\r\n                        onChange={(e) =&gt; {\r\n                          const newProjects = [...projects];\r\n                          newProjects[index].description = e.target.value;\r\n                          setProjects(newProjects);\r\n                          setHasChanges(true);\r\n                        }}\r\n                        rows=\&quot;4\&quot;\r\n                      /&gt;\r\n                    \u003c/div&gt;\r\n\r\n                    \u003cdiv className=\&quot;form-group\&quot;&gt;\r\n                      \u003clabel&gt;Technologies (comma-separated)\u003c/label&gt;\r\n                      \u003cinput\r\n                        type=\&quot;text\&quot;\r\n                        className=\&quot;form-input\&quot;\r\n                        placeholder=\&quot;e.g., React, Node.js, MongoDB, AWS\&quot;\r\n                        value={project.technologies?.join(&#39;, &#39;) || &#39;&#39;}\r\n                        onChange={(e) =&gt; {\r\n                          const newProjects = [...projects];\r\n                          newProjects[index].technologies = e.target.value.split(&#39;,&#39;).map(t =&gt; t.trim()).filter(t =&gt; t);\r\n                          setProjects(newProjects);\r\n                          setHasChanges(true);\r\n                        }}\r\n                      /&gt;\r\n                    \u003c/div&gt;\r\n\r\n                    \u003cdiv className=\&quot;form-group\&quot;&gt;\r\n                      \u003clabel&gt;GitHub URL\u003c/label&gt;\r\n                      \u003cinput\r\n                        type=\&quot;url\&quot;\r\n                        className=\&quot;form-input\&quot;\r\n                        placeholder=\&quot;https://github.com/username/project\&quot;\r\n                        value={project.githubUrl || &#39;&#39;}\r\n                        onChange={(e) =&gt; {\r\n                          const newProjects = [...projects];\r\n                          newProjects[index].githubUrl = e.target.value;\r\n                          setProjects(newProjects);\r\n                          setHasChanges(true);\r\n                        }}\r\n                      /&gt;\r\n                    \u003c/div&gt;\r\n\r\n                    \u003cdiv className=\&quot;form-group\&quot;&gt;\r\n                      \u003clabel&gt;Live Demo URL\u003c/label&gt;\r\n                      \u003cinput\r\n                        type=\&quot;url\&quot;\r\n                        className=\&quot;form-input\&quot;\r\n                        placeholder=\&quot;https://your-project-demo.com\&quot;\r\n                        value={project.liveUrl || &#39;&#39;}\r\n                        onChange={(e) =&gt; {\r\n                          const newProjects = [...projects];\r\n                          newProjects[index].liveUrl = e.target.value;\r\n                          setProjects(newProjects);\r\n                          setHasChanges(true);\r\n                        }}\r\n                      /&gt;\r\n                    \u003c/div&gt;\r\n\r\n                    \u003cdiv className=\&quot;form-group\&quot;&gt;\r\n                      \u003clabel&gt;Image URL\u003c/label&gt;\r\n                      \u003cinput\r\n                        type=\&quot;url\&quot;\r\n                        className=\&quot;form-input\&quot;\r\n                        placeholder=\&quot;https://example.com/project-screenshot.jpg\&quot;\r\n                        value={project.imageUrl || &#39;&#39;}\r\n                        onChange={(e) =&gt; {\r\n                          const newProjects = [...projects];\r\n                          newProjects[index].imageUrl = e.target.value;\r\n                          setProjects(newProjects);\r\n                          setHasChanges(true);\r\n                        }}\r\n                      /&gt;\r\n                    \u003c/div&gt;\r\n                  \u003c/div&gt;\r\n                \u003c/div&gt;\r\n              ))}\r\n\r\n              \u003cbutton\r\n                type=\&quot;button\&quot;\r\n                onClick={() =&gt; {\r\n                  setProjects([...projects, { \r\n                    title: &#39;&#39;, \r\n                    description: &#39;&#39;, \r\n                    technologies: [], \r\n                    githubUrl: &#39;&#39;, \r\n                    liveUrl: &#39;&#39;,\r\n                    imageUrl: &#39;&#39;\r\n                  }]);\r\n                  setHasChanges(true);\r\n                }}\r\n                className=\&quot;btn btn-add-card\&quot;\r\n              &gt;\r\n                + Add Project\r\n              \u003c/button&gt;\r\n            \u003c/div&gt;\r\n          \u003c/div&gt;\r\n        )}\r\n\r\n        {/* BLOG TAB */}\r\n        {activeTab === &#39;blog&#39; &amp;&amp; (\r\n          \u003cdiv className=\&quot;portfolio-section\&quot;&gt;\r\n            \u003ch2&gt;Blog Posts\u003c/h2&gt;\r\n            \u003cp className=\&quot;section-description\&quot;&gt;Create and manage your blog content\u003c/p&gt;\r\n            \r\n            \u003cdiv className=\&quot;blog-manager\&quot;&gt;\r\n              {posts.map((post, index) =&gt; (\r\n                \u003cdiv key={index} className=\&quot;card\&quot;&gt;\r\n                  \u003cdiv className=\&quot;card-header\&quot;&gt;\r\n                    \u003ch3&gt;Blog Post {index + 1}\u003c/h3&gt;\r\n                    {posts.length &gt; 1 &amp;&amp; (\r\n                      \u003cbutton\r\n                        type=\&quot;button\&quot;\r\n                        onClick={() =&gt; {\r\n                          const newPosts = posts.filter((_, i) =&gt; i !== index);\r\n                          setPosts(newPosts);\r\n                          setHasChanges(true);\r\n                        }}\r\n                        className=\&quot;btn-remove-card\&quot;\r\n                      &gt;\r\n                        Remove\r\n                      \u003c/button&gt;\r\n                    )}\r\n                  \u003c/div&gt;\r\n                  \u003cdiv className=\&quot;card-body\&quot;&gt;\r\n                    \u003cdiv className=\&quot;form-group\&quot;&gt;\r\n                      \u003clabel&gt;Post Title *\u003c/label&gt;\r\n                      \u003cinput\r\n                        type=\&quot;text\&quot;\r\n                        className=\&quot;form-input\&quot;\r\n                        placeholder=\&quot;e.g., Getting Started with React Hooks\&quot;\r\n                        value={post.title || &#39;&#39;}\r\n                        onChange={(e) =&gt; {\r\n                          const newPosts = [...posts];\r\n                          newPosts[index].title = e.target.value;\r\n                          setPosts(newPosts);\r\n                          setHasChanges(true);\r\n                        }}\r\n                      /&gt;\r\n                    \u003c/div&gt;\r\n\r\n                    \u003cdiv className=\&quot;form-group\&quot;&gt;\r\n                      \u003clabel&gt;Excerpt (Brief Summary)\u003c/label&gt;\r\n                      \u003ctextarea\r\n                        className=\&quot;form-textarea\&quot;\r\n                        placeholder=\&quot;Write a brief summary of your blog post...\&quot;\r\n                        value={post.excerpt || &#39;&#39;}\r\n                        onChange={(e) =&gt; {\r\n                          const newPosts = [...posts];\r\n                          newPosts[index].excerpt = e.target.value;\r\n                          setPosts(newPosts);\r\n                          setHasChanges(true);\r\n                        }}\r\n                        rows=\&quot;2\&quot;\r\n                      /&gt;\r\n                    \u003c/div&gt;\r\n\r\n                    \u003cdiv className=\&quot;form-group\&quot;&gt;\r\n                      \u003clabel&gt;Content *\u003c/label&gt;\r\n                      \u003ctextarea\r\n                        className=\&quot;form-textarea\&quot;\r\n                        placeholder=\&quot;Write your blog post content here...\&quot;\r\n                        value={post.content || &#39;&#39;}\r\n                        onChange={(e) =&gt; {\r\n                          const newPosts = [...posts];\r\n                          newPosts[index].content = e.target.value;\r\n                          setPosts(newPosts);\r\n                          setHasChanges(true);\r\n                        }}\r\n                        rows=\&quot;8\&quot;\r\n                      /&gt;\r\n                    \u003c/div&gt;\r\n\r\n                    \u003cdiv className=\&quot;form-group\&quot;&gt;\r\n                      \u003clabel&gt;Tags (comma-separated)\u003c/label&gt;\r\n                      \u003cinput\r\n                        type=\&quot;text\&quot;\r\n                        className=\&quot;form-input\&quot;\r\n                        placeholder=\&quot;e.g., react, javascript, web development\&quot;\r\n                        value={post.tags?.join(&#39;, &#39;) || &#39;&#39;}\r\n                        onChange={(e) =&gt; {\r\n                          const newPosts = [...posts];\r\n                          newPosts[index].tags = e.target.value.split(&#39;,&#39;).map(t =&gt; t.trim()).filter(t =&gt; t);\r\n                          setPosts(newPosts);\r\n                          setHasChanges(true);\r\n                        }}\r\n                      /&gt;\r\n                    \u003c/div&gt;\r\n\r\n                    \u003cdiv className=\&quot;form-group\&quot;&gt;\r\n                      \u003clabel&gt;Featured Image URL\u003c/label&gt;\r\n                      \u003cinput\r\n                        type=\&quot;url\&quot;\r\n                        className=\&quot;form-input\&quot;\r\n                        placeholder=\&quot;https://example.com/blog-image.jpg\&quot;\r\n                        value={post.imageUrl || &#39;&#39;}\r\n                        onChange={(e) =&gt; {\r\n                          const newPosts = [...posts];\r\n                          newPosts[index].imageUrl = e.target.value;\r\n                          setPosts(newPosts);\r\n                          setHasChanges(true);\r\n                        }}\r\n                      /&gt;\r\n                    \u003c/div&gt;\r\n                  \u003c/div&gt;\r\n                \u003c/div&gt;\r\n              ))}\r\n\r\n              \u003cbutton\r\n                type=\&quot;button\&quot;\r\n                onClick={() =&gt; {\r\n                  setPosts([...posts, { \r\n                    title: &#39;&#39;, \r\n                    excerpt: &#39;&#39;,\r\n                    content: &#39;&#39;, \r\n                    tags: [],\r\n                    imageUrl: &#39;&#39;\r\n                  }]);\r\n                  setHasChanges(true);\r\n                }}\r\n                className=\&quot;btn btn-add-card\&quot;\r\n              &gt;\r\n                + Add Blog Post\r\n              \u003c/button&gt;\r\n            \u003c/div&gt;\r\n          \u003c/div&gt;\r\n        )}\r\n      \u003c/div&gt;\r\n\r\n      {/* Action Buttons */}\r\n      \u003cdiv className=\&quot;portfolio-actions\&quot;&gt;\r\n        \u003cbutton\r\n          onClick={handleCancel}\r\n          className=\&quot;btn btn-cancel\&quot;\r\n          disabled={saving}\r\n        &gt;\r\n          Cancel\r\n        \u003c/button&gt;\r\n        {isAdmin &amp;&amp; (\r\n          \u003cbutton\r\n            onClick={handleDelete}\r\n            className=\&quot;btn btn-delete\&quot;\r\n            disabled={saving}\r\n          &gt;\r\n            Delete All\r\n          \u003c/button&gt;\r\n        )}\r\n        \u003cbutton\r\n          onClick={handleSave}\r\n          className=\&quot;btn btn-save\&quot;\r\n          disabled={saving}\r\n        &gt;\r\n          {saving ? &#39;Saving...&#39; : &#39;Save &amp; Refresh&#39;}\r\n        \u003c/button&gt;\r\n      \u003c/div&gt;\r\n\r\n      \u003cdiv className=\&quot;portfolio-note\&quot;&gt;\r\n        \u003cp&gt;💡 \u003cstrong&gt;Note:\u003c/strong&gt; After saving, your portfolio will automatically refresh to show the updated content.\u003c/p&gt;\r\n      \u003c/div&gt;\r\n    \u003c/div&gt;\r\n  );\r\n};\r\n\r\nexport default CreatePortfolio;\r\n&quot;,&quot;loc&quot;:{&quot;line&quot;:210,&quot;column&quot;:10,&quot;index&quot;:7399}}
+              try {
+                const { ErrorOverlay } = await import(&quot;/@vite/client&quot;)
+                document.body.appendChild(new ErrorOverlay(error))
+              } catch {
+                const h = (tag, text) =&gt; {
+                  const el = document.createElement(tag)
+                  el.textContent = text
+                  return el
+                }
+                document.body.appendChild(h(&#39;h1&#39;, &#39;Internal Server Error&#39;))
+                document.body.appendChild(h(&#39;h2&#39;, error.message))
+                document.body.appendChild(h(&#39;pre&#39;, error.stack))
+                document.body.appendChild(h(&#39;p&#39;, &#39;(Error overlay failed to load)&#39;))
+              }
+            &lt;/script&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>HTTP/1.1 500 Internal Server Error</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Review the source code of this page. Implement custom error pages. Consider implementing a mechanism to provide a unique error reference/identifier to the client (browser) while logging the details on the server side and not exposing them to the user.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				
+				  
+				 
+				
+				
+				<li id="alerts--risk-0-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Informational</span>, <span>Confidence</span>=<span
+							class="confidence-level">High</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://localhost:5173</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-6">CSP: Header &amp; Meta</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://localhost:5173/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/693.html">CWE-693</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_DEV_STD = </span>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The message contained both CSP specified via header and via Meta tag. It was not possible to union these policies in order to perform an analysis. Therefore, they have been evaluated individually.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (230 bytes)</summary>
+				
+				<pre><code>GET https://localhost:5173/ HTTP/1.1
+host: localhost:5173
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (838 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Vary: Origin
+Content-Type: text/html
+Cache-Control: no-cache
+Etag: W/&quot;4a6-A5d5680nXsN7/fK04DhE3K0BpQM&quot;
+Content-Security-Policy: default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: https://localhost:3000; connect-src &#39;self&#39; https://localhost:3000 ws://localhost:5173 wss://localhost:5173; font-src &#39;self&#39;; object-src &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;self&#39;; frame-ancestors &#39;none&#39;;
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=(), camera=()
+Date: Sat, 06 Dec 2025 01:01:09 GMT
+Connection: keep-alive
+Content-Length: 1190
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (1190 bytes)</summary>
+				
+				<pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;script type=&quot;module&quot;&gt;import { injectIntoGlobalHook } from &quot;/@react-refresh&quot;;
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () =&gt; {};
+window.$RefreshSig$ = () =&gt; (type) =&gt; type;&lt;/script&gt;
+
+    &lt;script type=&quot;module&quot; src=&quot;/@vite/client&quot;&gt;&lt;/script&gt;
+
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/x-icon&quot; href=&quot;./dev_logo.ico&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;Developer Portfolio Project Showcase&quot; /&gt;
+    
+    &lt;!-- Note: Security headers are set by the backend server (Helmet.js) --&gt;
+    &lt;!-- CSP via meta tag is limited - only certain directives are allowed --&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: https://localhost:3000; connect-src &#39;self&#39; https://localhost:3000; font-src &#39;self&#39;;&quot; /&gt;
+    
+    &lt;title&gt;Developer Portfolio&lt;/title&gt;   
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+    &lt;script type=&quot;module&quot; src=&quot;/src/main.jsx&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-0-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Informational</span>, <span>Confidence</span>=<span
+							class="confidence-level">Medium</span> <span>(3)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://localhost:5173</span> <span>(3)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-7">Content-Type Header Missing</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://localhost:5173/.env</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/345.html">CWE-345</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The Content-Type header was either missing or empty.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (278 bytes)</summary>
+				
+				<pre><code>GET https://localhost:5173/.env HTTP/1.1
+host: localhost:5173
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+referer: https://localhost:5173/robots.txt
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (751 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 403 Forbidden
+Vary: Origin
+Content-Security-Policy: default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: https://localhost:3000; connect-src &#39;self&#39; https://localhost:3000 ws://localhost:5173 wss://localhost:5173; font-src &#39;self&#39;; object-src &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;self&#39;; frame-ancestors &#39;none&#39;;
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=(), camera=()
+Date: Sat, 06 Dec 2025 01:01:09 GMT
+Connection: keep-alive
+content-length: 427
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (427 bytes)</summary>
+				
+				<pre><code>
+    &lt;body&gt;
+      &lt;h1&gt;403 Restricted&lt;/h1&gt;
+      &lt;p&gt;The request id &amp;quot;C:\developer-portfolio-1205\frontend\.env&amp;quot; is outside of Vite serving allow list.&lt;br/&gt;&lt;br/&gt;- C:/developer-portfolio-1205/frontend&lt;br/&gt;&lt;br/&gt;Refer to docs https://vite.dev/config/server-options.html#server-fs-allow for configurations and more details.&lt;/p&gt;
+      &lt;style&gt;
+        body {
+          padding: 1em 2em;
+        }
+      &lt;/style&gt;
+    &lt;/body&gt;
+  </code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>content-type</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure each page is setting the specific and appropriate content-type value for the content being delivered.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-8">Information Disclosure - Sensitive Information in URL</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://localhost:5173/?token=FGwM5Shfuzhv</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/598.html">CWE-598</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure.html">OWASP_2017_A03</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_DEV_STD = </span>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The request appeared to contain sensitive information leaked in the URL. This can violate PCI and most organizational compliance policies. You can configure the list of strings for this check to add or remove values specific to your environment.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>The URL contains potentially sensitive information. The following string was found via the pattern: token</p>
+
+<p>token</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (469 bytes)</summary>
+				
+				<pre><code>GET https://localhost:5173/?token=FGwM5Shfuzhv HTTP/1.1
+host: localhost:5173
+Connection: Upgrade
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.0.0 Safari/537.36
+Upgrade: websocket
+Origin: https://localhost:5173
+Sec-WebSocket-Version: 13
+Accept-Language: en-US,en;q=0.9
+Sec-WebSocket-Key: +p1TD7CV9BQRvOEDniq2LQ==
+Sec-WebSocket-Protocol: vite-hmr
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (163 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: M5UiYQW7HMKcju/VwGLIJI1UXVg=
+Sec-WebSocket-Protocol: vite-hmr
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>token</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>token</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Do not pass sensitive information in URIs.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-10">Modern Web Application</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://localhost:5173/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_DEV_STD = </span>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>No links have been found while there are scripts, which is an indication that this is a modern web application.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (230 bytes)</summary>
+				
+				<pre><code>GET https://localhost:5173/ HTTP/1.1
+host: localhost:5173
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (838 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Vary: Origin
+Content-Type: text/html
+Cache-Control: no-cache
+Etag: W/&quot;4a6-A5d5680nXsN7/fK04DhE3K0BpQM&quot;
+Content-Security-Policy: default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: https://localhost:3000; connect-src &#39;self&#39; https://localhost:3000 ws://localhost:5173 wss://localhost:5173; font-src &#39;self&#39;; object-src &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;self&#39;; frame-ancestors &#39;none&#39;;
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=(), camera=()
+Date: Sat, 06 Dec 2025 01:01:09 GMT
+Connection: keep-alive
+Content-Length: 1190
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (1190 bytes)</summary>
+				
+				<pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;script type=&quot;module&quot;&gt;import { injectIntoGlobalHook } from &quot;/@react-refresh&quot;;
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () =&gt; {};
+window.$RefreshSig$ = () =&gt; (type) =&gt; type;&lt;/script&gt;
+
+    &lt;script type=&quot;module&quot; src=&quot;/@vite/client&quot;&gt;&lt;/script&gt;
+
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/x-icon&quot; href=&quot;./dev_logo.ico&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;Developer Portfolio Project Showcase&quot; /&gt;
+    
+    &lt;!-- Note: Security headers are set by the backend server (Helmet.js) --&gt;
+    &lt;!-- CSP via meta tag is limited - only certain directives are allowed --&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: https://localhost:3000; connect-src &#39;self&#39; https://localhost:3000; font-src &#39;self&#39;;&quot; /&gt;
+    
+    &lt;title&gt;Developer Portfolio&lt;/title&gt;   
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+    &lt;script type=&quot;module&quot; src=&quot;/src/main.jsx&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>&lt;script type=&quot;module&quot;&gt;import { injectIntoGlobalHook } from &quot;/@react-refresh&quot;;
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () =&gt; {};
+window.$RefreshSig$ = () =&gt; (type) =&gt; type;&lt;/script&gt;</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>This is an informational alert and so no changes are required.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-0-confidence-1">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Informational</span>, <span>Confidence</span>=<span
+							class="confidence-level">Low</span> <span>(2)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://localhost:5173</span> <span>(2)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-9">Information Disclosure - Suspicious Comments</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://localhost:5173/src/utils/axios.js</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/05-Review_Webpage_Content_for_Information_Leakage">WSTG-v42-INFO-05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure.html">OWASP_2017_A03</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/615.html">CWE-615</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The response appears to contain suspicious comments which may help an attacker.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>The following pattern was used: \bFROM\b and was detected in likely comment: &quot;//localhost:3000&quot;, &quot;VITE_API_URL&quot;: &quot;https://localhost:3000&quot;};import axios from &quot;/node_modules/.vite/deps/axios.js?v=0ab6237c&quot;;&quot;, see evidence field for the suspicious comment/snippet.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (566 bytes)</summary>
+				
+				<pre><code>GET https://localhost:5173/src/utils/axios.js HTTP/1.1
+host: localhost:5173
+Connection: keep-alive
+Origin: https://localhost:5173
+sec-ch-ua-platform: &quot;Windows&quot;
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.0.0 Safari/537.36
+sec-ch-ua: &quot;Google Chrome&quot;;v=&quot;143&quot;, &quot;Chromium&quot;;v=&quot;143&quot;, &quot;Not A(Brand&quot;;v=&quot;24&quot;
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: script
+Referer: https://localhost:5173/src/App.jsx
+Accept-Language: en-US,en;q=0.9
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (897 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Access-Control-Allow-Origin: https://localhost:5173
+Vary: Origin
+Content-Type: text/javascript
+Cache-Control: no-cache
+Etag: W/&quot;753-kT0rjxMppUEwMbkqhvbONrqs9vg&quot;
+Content-Security-Policy: default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: https://localhost:3000; connect-src &#39;self&#39; https://localhost:3000 ws://localhost:5173 wss://localhost:5173; font-src &#39;self&#39;; object-src &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;self&#39;; frame-ancestors &#39;none&#39;;
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=(), camera=()
+Date: Sat, 06 Dec 2025 01:01:15 GMT
+Connection: keep-alive
+Content-Length: 9986
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (9986 bytes)</summary>
+				
+				<pre><code>import.meta.env = {&quot;BASE_URL&quot;: &quot;/&quot;, &quot;DEV&quot;: true, &quot;MODE&quot;: &quot;development&quot;, &quot;PROD&quot;: false, &quot;SSR&quot;: false, &quot;VITE_API_BASE_URL&quot;: &quot;https://localhost:3000&quot;, &quot;VITE_API_URL&quot;: &quot;https://localhost:3000&quot;};import axios from &quot;/node_modules/.vite/deps/axios.js?v=0ab6237c&quot;;
+
+const axiosInstance = axios.create({
+  baseURL: import.meta.env.VITE_API_URL || &#39;https://localhost:3000&#39;,
+  withCredentials: true
+});
+
+// Request interceptor to add access token
+axiosInstance.interceptors.request.use(
+  (config) =&gt; {
+    const token = localStorage.getItem(&#39;accessToken&#39;);
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) =&gt; Promise.reject(error)
+);
+
+// Response interceptor to handle token refresh
+axiosInstance.interceptors.response.use(
+  (response) =&gt; response,
+  async (error) =&gt; {
+    const originalRequest = error.config;
+
+    // If error is 401 and we haven&#39;t retried yet
+    if (error.response?.status === 401 &amp;&amp; !originalRequest._retry) {
+      originalRequest._retry = true;
+
+      try {
+        // Try to refresh token
+        // Use the configured axios instance so baseURL and withCredentials are respected
+        const response = await axiosInstance.post(&#39;/auth/refresh&#39;, {}, { withCredentials: true });
+
+        const { accessToken } = response.data;
+        localStorage.setItem(&#39;accessToken&#39;, accessToken);
+
+        // Retry original request with new token
+        originalRequest.headers.Authorization = `Bearer ${accessToken}`;
+        return axiosInstance(originalRequest);
+      } catch (refreshError) {
+        // Refresh failed, logout user
+        localStorage.removeItem(&#39;accessToken&#39;);
+        window.location.href = &#39;/login&#39;;
+        return Promise.reject(refreshError);
+      }
+    }
+
+    return Promise.reject(error);
+  }
+);
+
+export default axiosInstance;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImF4aW9zLmpzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydC5tZXRhLmVudiA9IHtcIkJBU0VfVVJMXCI6IFwiL1wiLCBcIkRFVlwiOiB0cnVlLCBcIk1PREVcIjogXCJkZXZlbG9wbWVudFwiLCBcIlBST0RcIjogZmFsc2UsIFwiU1NSXCI6IGZhbHNlLCBcIlZJVEVfQVBJX0JBU0VfVVJMXCI6IFwiaHR0cHM6Ly9sb2NhbGhvc3Q6MzAwMFwiLCBcIlZJVEVfQVBJX1VSTFwiOiBcImh0dHBzOi8vbG9jYWxob3N0OjMwMDBcIn07aW1wb3J0IGF4aW9zIGZyb20gXCIvbm9kZV9tb2R1bGVzLy52aXRlL2RlcHMvYXhpb3MuanM/dj0wYWI2MjM3Y1wiO1xyXG5cclxuY29uc3QgYXhpb3NJbnN0YW5jZSA9IGF4aW9zLmNyZWF0ZSh7XHJcbiAgYmFzZVVSTDogaW1wb3J0Lm1ldGEuZW52LlZJVEVfQVBJX1VSTCB8fCAnaHR0cHM6Ly9sb2NhbGhvc3Q6MzAwMCcsXHJcbiAgd2l0aENyZWRlbnRpYWxzOiB0cnVlXHJcbn0pO1xyXG5cclxuLy8gUmVxdWVzdCBpbnRlcmNlcHRvciB0byBhZGQgYWNjZXNzIHRva2VuXHJcbmF4aW9zSW5zdGFuY2UuaW50ZXJjZXB0b3JzLnJlcXVlc3QudXNlKFxyXG4gIChjb25maWcpID0+IHtcclxuICAgIGNvbnN0IHRva2VuID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ2FjY2Vzc1Rva2VuJyk7XHJcbiAgICBpZiAodG9rZW4pIHtcclxuICAgICAgY29uZmlnLmhlYWRlcnMuQXV0aG9yaXphdGlvbiA9IGBCZWFyZXIgJHt0b2tlbn1gO1xyXG4gICAgfVxyXG4gICAgcmV0dXJuIGNvbmZpZztcclxuICB9LFxyXG4gIChlcnJvcikgPT4gUHJvbWlzZS5yZWplY3QoZXJyb3IpXHJcbik7XHJcblxyXG4vLyBSZXNwb25zZSBpbnRlcmNlcHRvciB0byBoYW5kbGUgdG9rZW4gcmVmcmVzaFxyXG5heGlvc0luc3RhbmNlLmludGVyY2VwdG9ycy5yZXNwb25zZS51c2UoXHJcbiAgKHJlc3BvbnNlKSA9PiByZXNwb25zZSxcclxuICBhc3luYyAoZXJyb3IpID0+IHtcclxuICAgIGNvbnN0IG9yaWdpbmFsUmVxdWVzdCA9IGVycm9yLmNvbmZpZztcclxuXHJcbiAgICAvLyBJZiBlcnJvciBpcyA0MDEgYW5kIHdlIGhhdmVuJ3QgcmV0cmllZCB5ZXRcclxuICAgIGlmIChlcnJvci5yZXNwb25zZT8uc3RhdHVzID09PSA0MDEgJiYgIW9yaWdpbmFsUmVxdWVzdC5fcmV0cnkpIHtcclxuICAgICAgb3JpZ2luYWxSZXF1ZXN0Ll9yZXRyeSA9IHRydWU7XHJcblxyXG4gICAgICB0cnkge1xyXG4gICAgICAgIC8vIFRyeSB0byByZWZyZXNoIHRva2VuXHJcbiAgICAgICAgLy8gVXNlIHRoZSBjb25maWd1cmVkIGF4aW9zIGluc3RhbmNlIHNvIGJhc2VVUkwgYW5kIHdpdGhDcmVkZW50aWFscyBhcmUgcmVzcGVjdGVkXHJcbiAgICAgICAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBheGlvc0luc3RhbmNlLnBvc3QoJy9hdXRoL3JlZnJlc2gnLCB7fSwgeyB3aXRoQ3JlZGVudGlhbHM6IHRydWUgfSk7XHJcblxyXG4gICAgICAgIGNvbnN0IHsgYWNjZXNzVG9rZW4gfSA9IHJlc3BvbnNlLmRhdGE7XHJcbiAgICAgICAgbG9jYWxTdG9yYWdlLnNldEl0ZW0oJ2FjY2Vzc1Rva2VuJywgYWNjZXNzVG9rZW4pO1xyXG5cclxuICAgICAgICAvLyBSZXRyeSBvcmlnaW5hbCByZXF1ZXN0IHdpdGggbmV3IHRva2VuXHJcbiAgICAgICAgb3JpZ2luYWxSZXF1ZXN0LmhlYWRlcnMuQXV0aG9yaXphdGlvbiA9IGBCZWFyZXIgJHthY2Nlc3NUb2tlbn1gO1xyXG4gICAgICAgIHJldHVybiBheGlvc0luc3RhbmNlKG9yaWdpbmFsUmVxdWVzdCk7XHJcbiAgICAgIH0gY2F0Y2ggKHJlZnJlc2hFcnJvcikge1xyXG4gICAgICAgIC8vIFJlZnJlc2ggZmFpbGVkLCBsb2dvdXQgdXNlclxyXG4gICAgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCdhY2Nlc3NUb2tlbicpO1xyXG4gICAgICAgIHdpbmRvdy5sb2NhdGlvbi5ocmVmID0gJy9sb2dpbic7XHJcbiAgICAgICAgcmV0dXJuIFByb21pc2UucmVqZWN0KHJlZnJlc2hFcnJvcik7XHJcbiAgICAgIH1cclxuICAgIH1cclxuXHJcbiAgICByZXR1cm4gUHJvbWlzZS5yZWplY3QoZXJyb3IpO1xyXG4gIH1cclxuKTtcclxuXHJcbmV4cG9ydCBkZWZhdWx0IGF4aW9zSW5zdGFuY2U7Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE1BQU0sQ0FBQyxJQUFJLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDLElBQUksQ0FBQyxDQUFDLENBQUMsSUFBSSxDQUFDLENBQUMsQ0FBQyxDQUFDLFdBQVcsQ0FBQyxDQUFDLENBQUMsQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUFDLEtBQUssQ0FBQyxDQUFDLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQyxLQUFLLENBQUMsQ0FBQyxDQUFDLGlCQUFpQixDQUFDLENBQUMsQ0FBQyxDQUFDLEtBQUssQ0FBQyxDQUFDLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDLENBQUMsQ0FBQyxZQUFZLENBQUMsQ0FBQyxDQUFDLENBQUMsS0FBSyxDQUFDLENBQUMsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUMsQ0FBQyxNQUFNLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxDQUFDLENBQUMsWUFBWSxDQUFDLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxLQUFLLENBQUMsRUFBRSxDQUFDLENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQztBQUMvUDtBQUNBLEtBQUssQ0FBQyxhQUFhLENBQUMsQ0FBQyxDQUFDLEtBQUssQ0FBQyxNQUFNLENBQUMsQ0FBQztBQUNwQyxDQUFDLENBQUMsT0FBTyxDQUFDLENBQUMsTUFBTSxDQUFDLElBQUksQ0FBQyxHQUFHLENBQUMsWUFBWSxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsS0FBSyxDQUFDLENBQUMsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7QUFDcEUsQ0FBQyxDQUFDLGVBQWUsQ0FBQyxDQUFDLElBQUk7QUFDdkIsQ0FBQyxDQUFDLENBQUM7QUFDSDtBQUNBLENBQUMsQ0FBQyxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsRUFBRSxDQUFDLEdBQUcsQ0FBQyxNQUFNLENBQUMsS0FBSztBQUMxQyxhQUFhLENBQUMsWUFBWSxDQUFDLE9BQU8sQ0FBQyxHQUFHLENBQUM7QUFDdkMsQ0FBQyxDQUFDLENBQUMsTUFBTSxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQztBQUNmLENBQUMsQ0FBQyxDQUFDLENBQUMsS0FBSyxDQUFDLEtBQUssQ0FBQyxDQUFDLENBQUMsWUFBWSxDQUFDLE9BQU8sQ0FBQyxDQUFDLFdBQVcsQ0FBQyxDQUFDLENBQUM7QUFDdEQsQ0FBQyxDQUFDLENBQUMsQ0FBQyxFQUFFLENBQUMsQ0FBQyxLQUFLLENBQUMsQ0FBQyxDQUFDO0FBQ2hCLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxPQUFPLENBQUMsYUFBYSxDQUFDLENBQUMsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxDQUFDLENBQUMsS0FBSyxDQUFDLENBQUMsQ0FBQztBQUN2RCxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUM7QUFDTCxDQUFDLENBQUMsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxNQUFNLENBQUM7QUFDbEIsQ0FBQyxDQUFDLENBQUMsQ0FBQztBQUNKLENBQUMsQ0FBQyxDQUFDLEtBQUssQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLE9BQU8sQ0FBQyxNQUFNLENBQUMsS0FBSyxDQUFDO0FBQ2xDLENBQUMsQ0FBQztBQUNGO0FBQ0EsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxFQUFFLENBQUMsTUFBTSxDQUFDLEtBQUssQ0FBQyxPQUFPO0FBQy9DLGFBQWEsQ0FBQyxZQUFZLENBQUMsUUFBUSxDQUFDLEdBQUcsQ0FBQztBQUN4QyxDQUFDLENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxRQUFRLENBQUM7QUFDekIsQ0FBQyxDQUFDLEtBQUssQ0FBQyxDQUFDLEtBQUssQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUM7QUFDcEIsQ0FBQyxDQUFDLENBQUMsQ0FBQyxLQUFLLENBQUMsZUFBZSxDQUFDLENBQUMsQ0FBQyxLQUFLLENBQUMsTUFBTSxDQUFDO0FBQ3pDO0FBQ0EsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxFQUFFLENBQUMsS0FBSyxDQUFDLEVBQUUsQ0FBQyxHQUFHLENBQUMsR0FBRyxDQUFDLEVBQUUsQ0FBQyxLQUFLLENBQUMsQ0FBQyxDQUFDLE9BQU8sQ0FBQyxHQUFHO0FBQ2pELENBQUMsQ0FBQyxDQUFDLENBQUMsRUFBRSxDQUFDLENBQUMsS0FBSyxDQUFDLFFBQVEsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLEdBQUcsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLGVBQWUsQ0FBQyxNQUFNLENBQUMsQ0FBQyxDQUFDO0FBQ3BFLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLGVBQWUsQ0FBQyxNQUFNLENBQUMsQ0FBQyxDQUFDLElBQUksQ0FBQztBQUNwQztBQUNBLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLEdBQUcsQ0FBQyxDQUFDO0FBQ1gsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLEdBQUcsQ0FBQyxFQUFFLENBQUMsT0FBTyxDQUFDLEtBQUs7QUFDL0IsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLEdBQUcsQ0FBQyxHQUFHLENBQUMsVUFBVSxDQUFDLEtBQUssQ0FBQyxRQUFRLENBQUMsRUFBRSxDQUFDLE9BQU8sQ0FBQyxHQUFHLENBQUMsZUFBZSxDQUFDLEdBQUcsQ0FBQyxTQUFTO0FBQ3pGLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxLQUFLLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxLQUFLLENBQUMsYUFBYSxDQUFDLElBQUksQ0FBQyxDQUFDLENBQUMsSUFBSSxDQUFDLE9BQU8sQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsZUFBZSxDQUFDLENBQUMsSUFBSSxDQUFDLENBQUMsQ0FBQyxDQUFDO0FBQ2xHO0FBQ0EsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLEtBQUssQ0FBQyxDQUFDLENBQUMsV0FBVyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLElBQUksQ0FBQztBQUM5QyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsWUFBWSxDQUFDLE9BQU8sQ0FBQyxDQUFDLFdBQVcsQ0FBQyxDQUFDLENBQUMsV0FBVyxDQUFDLENBQUM7QUFDekQ7QUFDQSxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsS0FBSyxDQUFDLFFBQVEsQ0FBQyxPQUFPLENBQUMsSUFBSSxDQUFDLEdBQUcsQ0FBQyxLQUFLO0FBQ2hELENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxlQUFlLENBQUMsT0FBTyxDQUFDLGFBQWEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxNQUFNLENBQUMsQ0FBQyxDQUFDLFdBQVcsQ0FBQyxDQUFDLENBQUM7QUFDeEUsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxhQUFhLENBQUMsZUFBZSxDQUFDLENBQUM7QUFDOUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLEtBQUssQ0FBQyxDQUFDLFlBQVksQ0FBQyxDQUFDLENBQUM7QUFDOUIsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLE9BQU8sQ0FBQyxNQUFNLENBQUMsQ0FBQyxNQUFNLENBQUMsSUFBSTtBQUN0QyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsWUFBWSxDQUFDLFVBQVUsQ0FBQyxDQUFDLFdBQVcsQ0FBQyxDQUFDLENBQUM7QUFDL0MsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxRQUFRLENBQUMsSUFBSSxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsS0FBSyxDQUFDLENBQUM7QUFDeEMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxPQUFPLENBQUMsTUFBTSxDQUFDLFlBQVksQ0FBQyxDQUFDO0FBQzVDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUM7QUFDUCxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUM7QUFDTDtBQUNBLENBQUMsQ0FBQyxDQUFDLENBQUMsTUFBTSxDQUFDLE9BQU8sQ0FBQyxNQUFNLENBQUMsS0FBSyxDQUFDLENBQUM7QUFDakMsQ0FBQyxDQUFDLENBQUM7QUFDSCxDQUFDLENBQUM7QUFDRjtBQUNBLE1BQU0sQ0FBQyxPQUFPLENBQUMsYUFBYSJ9</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>from</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-11">Re-examine Cache-control Directives</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://localhost:5173/api/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/04-Authentication_Testing/06-Testing_for_Browser_Cache_Weaknesses">WSTG-v42-ATHN-06</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/525.html">CWE-525</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (278 bytes)</summary>
+				
+				<pre><code>GET https://localhost:5173/api/ HTTP/1.1
+host: localhost:5173
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+referer: https://localhost:5173/robots.txt
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (838 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Vary: Origin
+Content-Type: text/html
+Cache-Control: no-cache
+Etag: W/&quot;4a5-0ZBQVql+aJPg1k/NX3E8IRPLZGM&quot;
+Content-Security-Policy: default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: https://localhost:3000; connect-src &#39;self&#39; https://localhost:3000 ws://localhost:5173 wss://localhost:5173; font-src &#39;self&#39;; object-src &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;self&#39;; frame-ancestors &#39;none&#39;;
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=(), camera=()
+Date: Sat, 06 Dec 2025 01:01:09 GMT
+Connection: keep-alive
+Content-Length: 1189
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (1189 bytes)</summary>
+				
+				<pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;script type=&quot;module&quot;&gt;import { injectIntoGlobalHook } from &quot;/@react-refresh&quot;;
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () =&gt; {};
+window.$RefreshSig$ = () =&gt; (type) =&gt; type;&lt;/script&gt;
+
+    &lt;script type=&quot;module&quot; src=&quot;/@vite/client&quot;&gt;&lt;/script&gt;
+
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/x-icon&quot; href=&quot;/dev_logo.ico&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;Developer Portfolio Project Showcase&quot; /&gt;
+    
+    &lt;!-- Note: Security headers are set by the backend server (Helmet.js) --&gt;
+    &lt;!-- CSP via meta tag is limited - only certain directives are allowed --&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: https://localhost:3000; connect-src &#39;self&#39; https://localhost:3000; font-src &#39;self&#39;;&quot; /&gt;
+    
+    &lt;title&gt;Developer Portfolio&lt;/title&gt;   
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+    &lt;script type=&quot;module&quot; src=&quot;/src/main.jsx&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>cache-control</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>no-cache</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>For secure content, ensure the cache-control HTTP header is set with &quot;no-cache, no-store, must-revalidate&quot;. If an asset should be cached consider setting the directives &quot;public, max-age, immutable&quot;.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				  
+			</ol>
+		</section>
+
+		<section id="appendix" class="appendix">
+			<h2>Appendix</h2>
+
+			<section id="alert-types" class="alert-types">
+				<h3>Alert Types</h3>
+				<p class="alert-types-intro">This section contains additional information on the types of alerts in the report.</p>
+				<ol>
+					<li
+						id="alert-type-0">
+						<h4>CSP: Failure to Define Directive with No Fallback</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10055/">CSP</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://www.w3.org/TR/CSP/">https://www.w3.org/TR/CSP/</a></li>
+										<li><a
+											href="https://caniuse.com/#search=content+security+policy">https://caniuse.com/#search=content+security+policy</a></li>
+										<li><a
+											href="https://content-security-policy.com/">https://content-security-policy.com/</a></li>
+										<li><a
+											href="https://github.com/HtmlUnit/htmlunit-csp">https://github.com/HtmlUnit/htmlunit-csp</a></li>
+										<li><a
+											href="https://web.dev/articles/csp#resource-options">https://web.dev/articles/csp#resource-options</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-1">
+						<h4>CSP: script-src unsafe-eval</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10055/">CSP</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://www.w3.org/TR/CSP/">https://www.w3.org/TR/CSP/</a></li>
+										<li><a
+											href="https://caniuse.com/#search=content+security+policy">https://caniuse.com/#search=content+security+policy</a></li>
+										<li><a
+											href="https://content-security-policy.com/">https://content-security-policy.com/</a></li>
+										<li><a
+											href="https://github.com/HtmlUnit/htmlunit-csp">https://github.com/HtmlUnit/htmlunit-csp</a></li>
+										<li><a
+											href="https://web.dev/articles/csp#resource-options">https://web.dev/articles/csp#resource-options</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-2">
+						<h4>CSP: script-src unsafe-inline</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10055/">CSP</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://www.w3.org/TR/CSP/">https://www.w3.org/TR/CSP/</a></li>
+										<li><a
+											href="https://caniuse.com/#search=content+security+policy">https://caniuse.com/#search=content+security+policy</a></li>
+										<li><a
+											href="https://content-security-policy.com/">https://content-security-policy.com/</a></li>
+										<li><a
+											href="https://github.com/HtmlUnit/htmlunit-csp">https://github.com/HtmlUnit/htmlunit-csp</a></li>
+										<li><a
+											href="https://web.dev/articles/csp#resource-options">https://web.dev/articles/csp#resource-options</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-3">
+						<h4>CSP: style-src unsafe-inline</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10055/">CSP</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://www.w3.org/TR/CSP/">https://www.w3.org/TR/CSP/</a></li>
+										<li><a
+											href="https://caniuse.com/#search=content+security+policy">https://caniuse.com/#search=content+security+policy</a></li>
+										<li><a
+											href="https://content-security-policy.com/">https://content-security-policy.com/</a></li>
+										<li><a
+											href="https://github.com/HtmlUnit/htmlunit-csp">https://github.com/HtmlUnit/htmlunit-csp</a></li>
+										<li><a
+											href="https://web.dev/articles/csp#resource-options">https://web.dev/articles/csp#resource-options</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-4">
+						<h4>Application Error Disclosure</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/90022/">Application Error Disclosure</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/550.html">550</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							
+						</table>
+					</li>
+					<li
+						id="alert-type-5">
+						<h4>Strict-Transport-Security Header Not Set</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10035/">Strict-Transport-Security Header</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/319.html">319</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</a></li>
+										<li><a
+											href="https://owasp.org/www-community/Security_Headers">https://owasp.org/www-community/Security_Headers</a></li>
+										<li><a
+											href="https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</a></li>
+										<li><a
+											href="https://caniuse.com/stricttransportsecurity">https://caniuse.com/stricttransportsecurity</a></li>
+										<li><a
+											href="https://datatracker.ietf.org/doc/html/rfc6797">https://datatracker.ietf.org/doc/html/rfc6797</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-6">
+						<h4>CSP: Header &amp; Meta</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10055/">CSP</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://www.w3.org/TR/CSP/">https://www.w3.org/TR/CSP/</a></li>
+										<li><a
+											href="https://caniuse.com/#search=content+security+policy">https://caniuse.com/#search=content+security+policy</a></li>
+										<li><a
+											href="https://content-security-policy.com/">https://content-security-policy.com/</a></li>
+										<li><a
+											href="https://github.com/HtmlUnit/htmlunit-csp">https://github.com/HtmlUnit/htmlunit-csp</a></li>
+										<li><a
+											href="https://web.dev/articles/csp#resource-options">https://web.dev/articles/csp#resource-options</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-7">
+						<h4>Content-Type Header Missing</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10019/">Content-Type Header Missing</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/345.html">345</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>12</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)">https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-8">
+						<h4>Information Disclosure - Sensitive Information in URL</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10024/">Information Disclosure - Sensitive Information in URL</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/598.html">598</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							
+						</table>
+					</li>
+					<li
+						id="alert-type-9">
+						<h4>Information Disclosure - Suspicious Comments</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10027/">Information Disclosure - Suspicious Comments</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/615.html">615</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							
+						</table>
+					</li>
+					<li
+						id="alert-type-10">
+						<h4>Modern Web Application</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10109/">Modern Web Application</a>)
+									</span>   
+								</td>
+							</tr>
+							
+							
+							
+						</table>
+					</li>
+					<li
+						id="alert-type-11">
+						<h4>Re-examine Cache-control Directives</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10015/">Re-examine Cache-control Directives</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/525.html">525</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching">https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</a></li>
+										<li><a
+											href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control">https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control</a></li>
+										<li><a
+											href="https://grayduck.mn/2021/09/13/cache-control-recommendations/">https://grayduck.mn/2021/09/13/cache-control-recommendations/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+				</ol>
+			</section>
+		</section>
+		 
+	</main>
+</body>
+</html>
+
+
+
