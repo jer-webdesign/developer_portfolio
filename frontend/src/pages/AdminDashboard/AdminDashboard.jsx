@@ -29,17 +29,9 @@ const AdminDashboard = () => {
 
   const fetchUsers = async () => {
     try {
-      setLoading(true);
-      console.log('Fetching users from /api/admin/users');
-      const response = await axiosInstance.get('/api/admin/users');
-      console.log('Response:', response.data);
-      if (response.data.success) {
-        console.log('Users received:', response.data.users);
-        setUsers(response.data.users);
+      setLoading(true);      const response = await axiosInstance.get('/api/admin/users');      if (response.data.success) {        setUsers(response.data.users);
       }
-    } catch (err) {
-      console.error('Error fetching users:', err);
-      setError(err.response?.data?.message || 'Failed to fetch users');
+    } catch (err) {      setError(err.response?.data?.message || 'Failed to fetch users');
     } finally {
       setLoading(false);
     }

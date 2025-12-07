@@ -1,0 +1,12 @@
+# Developer Portfolio - Robots Configuration
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://localhost:5173/sitemap.xml
+
+# Security: Disallow sensitive paths
+Disallow: /api/
+Disallow: /admin/
+Disallow: /.env
+Disallow: /config/

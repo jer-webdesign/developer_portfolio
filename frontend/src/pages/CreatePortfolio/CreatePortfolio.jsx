@@ -54,9 +54,6 @@ const CreatePortfolio = () => {
     try {
       const response = await axiosInstance.get('/api/my-portfolio');
       const { user: userData, projects: userProjects, posts: userPosts } = response.data.data;
-
-      console.log('Portfolio data loaded:', { userData, userProjects, userPosts });
-
       // Load Home data
       if (userData.profile) {
         setHomeData({
@@ -90,10 +87,7 @@ const CreatePortfolio = () => {
         })));
       }
 
-      // Load Projects and Posts
-      console.log('Setting projects:', userProjects);
-      console.log('Setting posts:', userPosts);
-      
+      // Load Projects and Posts      
       // Transform projects from backend format to form format
       const transformedProjects = userProjects?.map(p => ({
         _id: p._id,
@@ -135,9 +129,7 @@ const CreatePortfolio = () => {
       }]);
 
       setMessage({ type: 'success', text: 'Portfolio data loaded successfully!' });
-    } catch (error) {
-      console.error('Error loading portfolio:', error);
-      setMessage({ type: 'error', text: 'Failed to load portfolio data' });
+    } catch (error) {      setMessage({ type: 'error', text: 'Failed to load portfolio data' });
     } finally {
       setLoading(false);
     }
@@ -188,23 +180,11 @@ const CreatePortfolio = () => {
           twitter: '',
           website: ''
         }
-      };
-
-      console.log('=== SAVING PORTFOLIO ===');
-      console.log('Skills being saved:', filteredSkills);
-      console.log('Contact data:', {
-        publicEmail: contactData.publicEmail,
-        phone: contactData.phone,
-        location: contactData.location
-      });
-      console.log('Full portfolio payload:', JSON.stringify(portfolioPayload, null, 2));
-      
+      };      
       await axiosInstance.put('/api/my-portfolio', portfolioPayload);
 
       // Save projects (create or update)
-      const validProjects = projects.filter(p => p.title && p.title.trim() && p.description && p.description.trim());
-      console.log('Valid projects to save:', validProjects.length);
-      
+      const validProjects = projects.filter(p => p.title && p.title.trim() && p.description && p.description.trim());      
       for (const project of validProjects) {
         // Transform project data to match backend schema
         const projectData = {
@@ -223,23 +203,15 @@ const CreatePortfolio = () => {
           status: 'completed', // Set status to completed so it shows up
           featured: true // Make it featured by default
         };
-
-        console.log('Saving project:', projectData);
-
         try {
           if (project._id) {
             // Update existing project
-            console.log('Updating project:', project._id);
             const response = await axiosInstance.put(`/api/my-projects/${project._id}`, projectData);
-            console.log('Project updated:', response.data);
           } else {
             // Create new project
-            console.log('Creating new project');
             const response = await axiosInstance.post('/api/my-projects', projectData);
-            console.log('Project created:', response.data);
           }
         } catch (error) {
-          console.error('Error saving project:', error.response?.data || error.message);
           throw error; // Re-throw to be caught by outer catch
         }
       }
@@ -291,10 +263,7 @@ const CreatePortfolio = () => {
       setTimeout(() => {
         window.location.reload(true);
       }, 1000);
-    } catch (error) {
-      console.error('Error saving portfolio:', error);
-      console.error('Error response:', error.response?.data);
-      const errorMessage = error.response?.data?.error || error.message || 'Failed to save portfolio';
+    } catch (error) {      const errorMessage = error.response?.data?.error || error.message || 'Failed to save portfolio';
       setMessage({ type: 'error', text: errorMessage });
       setSaving(false);
     }
@@ -337,9 +306,7 @@ const CreatePortfolio = () => {
       setTimeout(() => {
         window.location.reload();
       }, 1000);
-    } catch (error) {
-      console.error('Error deleting portfolio:', error);
-      setMessage({ type: 'error', text: 'Failed to delete portfolio' });
+    } catch (error) {      setMessage({ type: 'error', text: 'Failed to delete portfolio' });
       setSaving(false);
     }
   };
