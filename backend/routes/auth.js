@@ -57,11 +57,10 @@ router.post('/register', registerLimiter, registerValidation, async (req, res) =
     });
 
     if (existingUser) {
-      return res.status(409).json({ 
+      // Generic error message to prevent account enumeration
+      return res.status(400).json({ 
         success: false, 
-        message: existingUser.email === email 
-          ? 'Email already registered' 
-          : 'Username already taken' 
+        message: 'Registration failed. Please check your information and try again.' 
       });
     }
 
