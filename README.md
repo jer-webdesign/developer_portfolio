@@ -309,6 +309,7 @@ developer-portfolio/
 ### **Core Documentation**
 - **[Main README](README.md)** - Project overview and quick start guide
 - **[Frontend Guide](frontend/README.md)** - React application setup, architecture and integration details
+- **[Developer Guide](README_DEVELOPER.md)** - Development workflow and technical details
 
 ### **Authentication & Security**
 - **[Authentication Guide](README_AUTH.md)** - Comprehensive authentication implementation
@@ -324,6 +325,36 @@ developer-portfolio/
 - **[Portfolio Editor Integration](PORTFOLIO_EDITOR_INTEGRATION.md)** - Portfolio editing functionality
 - **[Customizable Pages Update](CUSTOMIZABLE_PAGES_UPDATE.md)** - Customizable page components
 - **[Lessons Learned](LESSONS_LEARNED.md)** - Development insights and best practices
+
+### **Phase 4: Security Testing & Ethical Considerations**
+
+#### **Threat Modeling**
+- **[Threat Model](THREAT_MODEL.md)** - STRIDE-based threat analysis with 15 identified threats, risk assessment, and attack vectors
+
+#### **Security Testing**
+- **[Security Testing Report](SECURITY_TESTING_REPORT.md)** - Comprehensive security testing including:
+  - Testing methodology (manual, automated, code review)
+  - OWASP ZAP dynamic scanning (5 scan iterations)
+  - npm audit dependency scanning
+  - Manual penetration testing (XSS, NoSQL injection, CSRF, IDOR, JWT)
+  - Testing evidence and validation results
+  - Reflection on testing process
+
+#### **Vulnerability Fixes**
+- **[Vulnerability Fixes](BACKEND_VULNERABILITY_TESTING_AND_FIXES_IMPLEMENTED.md)** - Backend/dependency remediation including:
+  - npm audit fixes (jws, validator, nodemailer)
+  - Account enumeration fix
+  - Regression testing and validation
+  - Security posture improvement (B+ → A rating)
+  
+- **[OWASP ZAP Fixes](FRONTEND_OWASP_ZAP_VULNERABILITY_TESTING_AND_FIXES_IMPLEMENTED.md)** - Frontend/web application hardening including:
+  - Application error disclosure fix (HIGH severity)
+  - CSP meta tag conflict resolution
+  - Security headers implementation
+  - Development vs production artifact handling
+  - 5 progressive scan improvements
+
+- **[Security Lessons Learned](SECURITY_LESSONS_LEARNED.md)** - Key takeaways from security implementation and testing
 
 ---
 
