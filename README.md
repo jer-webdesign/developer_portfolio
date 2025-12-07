@@ -376,43 +376,6 @@ developer-portfolio/
 
 ---
 
-##  **Technology Stack**
-
-### **Backend**
-- **Runtime**: Node.js + Express
-- **Security**: Helmet.js, SSL/TLS
-- **Protocol**: HTTPS only
-- **Port**: 3000
-- **API Routes**: Profile, Projects, Blog, Contact
-
-### **Frontend**
-- **Framework**: React 18
-- **Build Tool**: Vite
-- **Styling**: Pure CSS with CSS Variables
-- **Icons**: Lucide React
-- **Port**: 5173 (HTTPS)
-- **Sections**: Home, About, Skills, Projects, Blog, Contact
-
----
-
-##  **Security Features**
-
-### **SSL/TLS Configuration**
-- **Certificate Type**: Self-signed (development)
-- **Encryption**: RSA 4096-bit
-- **Subject Alternative Names**: localhost, 127.0.0.1, ::1
-- **HTTPS Enforcement**: Strict Transport Security headers
-
-### **Role-Based Access Control**
-- **User Roles**: Standard users and administrators
-- **Multi-Admin Support**: Configurable multiple administrators
-- **Route Protection**: Frontend and backend route guards
-- **Permission Checks**: Middleware-based authorization
-- **Admin Features**: User management and portfolio oversight
-- **Admin Management**: Runtime addition/removal of admin users
-
----
-
 ##  **Authentication Flow**
 
 ### **Registration Process**
@@ -520,7 +483,7 @@ All identified vulnerabilities have been addressed:
 **Current Security Rating**: A (Excellent)
 
 See `SECURITY_TESTING_REPORT.md` for comprehensive testing documentation.  
-See `VULNERABILITY_FIXES.md` for detailed remediation steps.
+See `FRONTEND_OWASP_ZAP_VULNERABILITY_TESTING_AND_FIXES_IMPLEMENTED.md and BACKEND_VULNERABILITY_TESTING_AND_FIXES_IMPLEMENTED.md` for detailed remediation steps.
 
 #### **Validated Security Controls**
 - **Input Validation**: Multi-layer validation (express-validator, Mongoose, React)
@@ -760,105 +723,6 @@ For privacy concerns or questions, contact the development team through the appl
 - Check browser console for detailed error messages
 - Use MongoDB Compass for database inspection
 - Test API endpoints with Postman or similar tools
-
-## 📚 **Security Documentation**
-
-Comprehensive security documentation is available in the following files:
-
-### **Core Security Documents**
-
-#### **THREAT_MODEL.md**
-Complete threat analysis using the STRIDE framework:
-- **Critical Assets**: Identification of all valuable assets (user data, tokens, database, keys)
-- **Threat Categories**: 15 identified threats across Spoofing, Tampering, Repudiation, Information Disclosure, DoS, and Elevation of Privilege
-- **Risk Assessment**: Impact and likelihood analysis for each threat
-- **Mitigation Strategies**: Security controls implemented to address threats
-- **Threat Diagram**: Visual representation of data flows and trust boundaries
-
-**Key Sections**:
-- Asset inventory and classification
-- STRIDE threat analysis with detailed attack vectors
-- Risk level determination (High, Medium, Low)
-- Security testing recommendations
-- Reflection on threat modeling process
-
-#### **SECURITY_TESTING_REPORT.md**
-Comprehensive vulnerability testing and findings:
-- **Testing Methodology**: Manual penetration testing + automated scanning
-- **Tools Used**: npm audit, manual browser testing, cURL, DevTools
-- **Vulnerability Findings**: 5 vulnerabilities identified (2 high, 1 medium, 2 low)
-- **Test Results**: Detailed results for SQL injection, XSS, CSRF, IDOR, JWT security
-- **Security Strengths**: Validation of 10+ security controls
-- **Evidence**: Test cases, payloads, and responses documented
-
-**Vulnerabilities Identified**:
-- High: jws HMAC vulnerability (fixed)
-- High: validator filtering vulnerability (fixed)
-- Medium: Account enumeration (fixed)
-- Low: nodemailer DoS (fixed)
-- Low: cookie package vulnerability (accepted risk)
-
-**Security Rating**: A (Excellent) after remediation
-
-#### **VULNERABILITY_FIXES.md**
-Detailed remediation documentation:
-- **Fix Implementation**: Step-by-step remediation for each vulnerability
-- **Code Changes**: Before/after code comparisons with explanations
-- **Validation Testing**: Regression testing and fix verification
-- **Deployment Checklist**: Pre-deployment security validation steps
-- **Timeline**: Remediation completed in under 2 hours
-- **Future Recommendations**: Short, medium, and long-term security improvements
-
-**Remediation Summary**:
-- All high-severity vulnerabilities resolved
-- All medium-severity vulnerabilities resolved
-- Zero regressions introduced
-- Comprehensive validation testing completed
-
-#### **SECURITY_LESSONS_LEARNED.md**
-Insights and reflections from security implementation:
-- **Key Achievements**: Successful threat modeling, testing, and remediation
-- **Challenges Encountered**: Security vs. UX trade-offs, archived dependencies, time management
-- **Technical Insights**: Defense in depth, input validation complexity, JWT security, Mongoose protection
-- **Process Improvements**: Shift security left, automated monitoring, documentation standards
-- **Ethical Reflections**: Authorized testing, responsible disclosure, legal compliance
-- **Skills Developed**: Technical, professional, and mindset growth
-- **Future Recommendations**: Prioritized roadmap for continued security improvement
-
-**Key Learnings**:
-- Security is a journey, not a destination
-- Defense in depth provides resilient protection
-- Automation complements manual testing
-- Documentation enables future security work
-- Ethics and legality are inseparable from security
-
----
-
-### **How to Use This Documentation**
-
-**For Developers**:
-1. Read **THREAT_MODEL.md** to understand security threats and architecture
-2. Review **SECURITY_TESTING_REPORT.md** to see what was tested and how
-3. Study **VULNERABILITY_FIXES.md** to understand remediation approaches
-4. Apply lessons from **SECURITY_LESSONS_LEARNED.md** to future work
-
-**For Security Auditors**:
-1. Start with **THREAT_MODEL.md** for risk assessment framework
-2. Examine **SECURITY_TESTING_REPORT.md** for testing coverage
-3. Verify **VULNERABILITY_FIXES.md** for remediation completeness
-4. Review ethical and legal compliance sections in README
-
-**For Project Managers**:
-1. **THREAT_MODEL.md**: Understand security risks and priorities
-2. **SECURITY_TESTING_REPORT.md**: See current security posture (Rating: A)
-3. **VULNERABILITY_FIXES.md**: Review deployment readiness
-4. **SECURITY_LESSONS_LEARNED.md**: Plan future security investments
-
-**For New Team Members**:
-1. Start with README security sections for overview
-2. Read **THREAT_MODEL.md** to understand security architecture
-3. Review **SECURITY_LESSONS_LEARNED.md** for best practices
-4. Reference other docs as needed during development
 
 ---
 
