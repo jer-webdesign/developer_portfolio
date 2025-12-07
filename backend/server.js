@@ -59,13 +59,27 @@ app.use(helmet({
       styleSrc: ["'self'", "'unsafe-inline'"],
       scriptSrc: ["'self'"],
       imgSrc: ["'self'", "data:", "https:"],
+      connectSrc: ["'self'"],
+      fontSrc: ["'self'"],
+      objectSrc: ["'none'"],
+      mediaSrc: ["'self'"],
+      frameSrc: ["'none'"],
+      frameAncestors: ["'none'"],
+      formAction: ["'self'"],
+      baseUri: ["'self'"],
+      upgradeInsecureRequests: [],
     },
   },
   hsts: {
     maxAge: 31536000,
     includeSubDomains: true,
     preload: true
-  }
+  },
+  frameguard: {
+    action: 'deny'
+  },
+  noSniff: true,
+  xssFilter: true
 }));
 
 // CORS configuration
@@ -105,18 +119,27 @@ app.get('/health', (req, res) => {
 
 // Error handling middleware
 app.use((err, req, res, next) => {
-  console.error('Error:', err);
+  // Log errors server-side only (never expose to client)
+  console.error('Error:', {
+    message: err.message,
+    stack: err.stack,
+    timestamp: new Date().toISOString(),
+    path: req.path
+  });
   
   if (err.code === 'EBADCSRFTOKEN') {
     return res.status(403).json({
       success: false,
-      message: 'Invalid CSRF token'
+      error: 'Invalid CSRF token'
     });
   }
 
-  res.status(err.status || 500).json({
+  // Generic error response - no stack traces or sensitive info
+  const statusCode = err.status || 500;
+  res.status(statusCode).json({
     success: false,
-    message: err.message || 'Internal server error',
+    error: statusCode === 500 ? 'Internal server error' : err.message || 'An error occurred',
+    // Only include stack trace in development mode
     ...(process.env.NODE_ENV === 'development' && { stack: err.stack })
   });
 });
@@ -125,7 +148,7 @@ app.use((err, req, res, next) => {
 app.use((req, res) => {
   res.status(404).json({
     success: false,
-    message: 'Route not found'
+    error: 'Resource not found'
   });
 });
 
